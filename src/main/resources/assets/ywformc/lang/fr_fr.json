@@ -1,0 +1,52 @@
+{
+  "creativetab.ywformc_tab": "Yo-kai Watch For Minecraft Mod",
+
+  "item.ywformc.yokai_watch": "Yo-kai Watch",
+  "item.ywformc.yokai_watch_poche": "Yo-kai Watch de Poche",
+  "item.ywformc.yokai_watch_zero": "Yo-kai Watch Modèle Zéro",
+  "item.ywformc.yokai_watch_prototype_u": "Yo-kai Watch Prototype U",
+  "item.ywformc.yokai_watch_u1": "Yo-kai Watch Modèle U1",
+  "item.ywformc.yokai_watch_u2": "Yo-kai Watch Modèle U2",
+  "item.ywformc.yokai_watch_ue": "Yo-kai Watch Modèle UE",
+  "item.ywformc.yokai_watch_reve": "Yo-kai Watch de Rêve",
+  "item.ywformc.treasure_watch": "Treasure Watch",
+  "item.ywformc.crystal_treasure_watch": "Treasure Watch Cristal",
+
+  "item.ywformc.yokai_watch_ancestrale": "Yo-kai Watch Ancestrale",
+  "item.ywformc.yokai_watch_ancestrale_n": "Yo-kai Watch Ancestrale N",
+  "item.ywformc.yokai_watch_ancestrale_zero": "Yo-kai Watch Ancestrale Zéro",
+  "item.ywformc.yokai_watch_ancestrale_god": "Yo-kai Watch Ancestrale God",
+  "item.ywformc.yokai_watch_ogre": "Yo-kai Watch Ogre",
+  "item.ywformc.yokai_watch_animus": "Yo-kai Watch Animus",
+
+  "item.ywformc.blaster_yokai": "Blaster Yo-kai",
+  "item.ywformc.foreuse_yokai": "Foreuse Yo-kai",
+  "item.ywformc.aspirateur_yokai": "Aspirateur Yo-kai",
+  "item.ywformc.yokai_bazooka": "Bazooka Yo-kai",
+  "item.ywformc.enma_blade": "Épée Enma",
+  "item.ywformc.enchanted_flute": "Flûte Enchantée",
+
+  "item.ywformc.fragment_de_yokai": "Fragment de Yo-kai",
+  "item.ywformc.vieil_engrenage": "Vieil Engrenage",
+  "item.ywformc.grelot_felin": "Grelot Félin",
+  "item.ywformc.montre_de_luxe": "Montre de Luxe",
+  "item.ywformc.bille_mysterieuse": "Bille Mystérieuse",
+
+  "item.ywformc.plaque_damulette": "Plaque d'Amulette",
+  "item.ywformc.amulette_forme_de_u": "Amulette en forme de U",
+  "item.ywformc.amulette_coloree": "Amulette colorée",
+
+  "item.ywformc.u_update": "Mise-à-jour U",
+  "item.ywformc.y9_processor_chip": "Processeur Y9",
+  "item.ywformc.extreme_lapis": "Lapis Extrême",
+  "item.ywformc.extreme_gold": "Or Extrême",
+
+  "item.ywformc.medallium": "Médallium",
+  "item.ywformc.yovnikai_watch": "Yovni-kai Watch",
+  "item.ywformc.cle_yokai_world": "Clé du Yo-kai World",
+  "item.ywformc.telemir_poche": "Télémir de Poche",
+
+
+  "block.ywformc.bloc_de_magnetite": "Bloc de Magnétite",
+  "block.ywformc.watchmakers_workbench": "Établi d'horlogerie"
+}

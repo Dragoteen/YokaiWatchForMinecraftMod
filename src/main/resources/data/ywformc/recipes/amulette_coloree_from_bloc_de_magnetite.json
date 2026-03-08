@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ywformc:bloc_de_magnetite"
+    }
+  ],
+  "result": {
+    "item": "ywformc:amulette_coloree",
+    "count": 9
+  }
+}

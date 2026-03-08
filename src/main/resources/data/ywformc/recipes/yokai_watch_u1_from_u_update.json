@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "ywformc:extreme_lapis"
+  },
+  "base": {
+    "item": "ywformc:yokai_watch_prototype_u"
+  },
+  "result": {
+    "item": "ywformc:yokai_watch_u1"
+  },
+  "template": {
+    "item": "ywformc:u_update"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ywformc:amulette_coloree"
+    }
+  },
+  "result": {
+    "item": "ywformc:bloc_de_magnetite"
+  }
+}

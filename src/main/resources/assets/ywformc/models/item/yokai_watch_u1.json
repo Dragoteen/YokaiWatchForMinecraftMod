@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ywformc:item/yokai_watch_u1"
+  }
+}
