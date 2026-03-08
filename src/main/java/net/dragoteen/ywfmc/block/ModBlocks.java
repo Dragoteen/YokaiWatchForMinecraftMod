@@ -26,7 +26,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BELL)));
 
     public static final RegistryObject<Block> WATCHMAKERS_WORKBENCH = registryBlock("watchmakers_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).mapColor(MapColor.TERRACOTTA_WHITE).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).mapColor(MapColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block) {

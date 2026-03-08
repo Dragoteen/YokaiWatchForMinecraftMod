@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ywformc:block/matchmakers_workbench"
+      "model": "ywformc:block/watchmakers_workbench"
     }
   }
 }
