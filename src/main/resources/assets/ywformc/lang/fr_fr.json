@@ -10,7 +10,7 @@
   "item.ywformc.yokai_watch_ue": "Yo-kai Watch Modèle UE",
   "item.ywformc.yokai_watch_reve": "Yo-kai Watch de Rêve",
   "item.ywformc.treasure_watch": "Treasure Watch",
-  "item.ywformc.crystal_treasure_watch": "Treasure Watch Cristal",
+  "item.ywformc.crystal_watch": "Cristal Watch",
 
   "item.ywformc.yokai_watch_ancestrale": "Yo-kai Watch Ancestrale",
   "item.ywformc.yokai_watch_ancestrale_n": "Yo-kai Watch Ancestrale N",
@@ -27,6 +27,11 @@
   "item.ywformc.yokai_bazooka": "Bazooka Yo-kai",
   "item.ywformc.enma_blade": "Épée Enma",
   "item.ywformc.enchanted_flute": "Flûte Enchantée",
+
+  "item.ywformc.boostokai": "Boosto-kai",
+  "item.ywformc.pistokit": "Pistokit",
+  "item.ywformc.sabrokit": "Sabrokit",
+  "item.ywformc.huedroid": "Hudroïd",
 
   "item.ywformc.fragment_de_yokai": "Fragment de Yo-kai",
   "item.ywformc.vieil_engrenage": "Vieil Engrenage",
@@ -50,6 +55,7 @@
 
   "item.ywformc.cleyokantik": "Cléyokantik",
   "item.ywformc.cleyolcanik": "Cléyolcanik",
+  "item.ywformc.cleyokanstrale": "Cléyokanstrale",
 
 
   "block.ywformc.bloc_de_magnetite": "Bloc de Magnétite",

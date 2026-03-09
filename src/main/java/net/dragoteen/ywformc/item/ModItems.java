@@ -31,7 +31,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TREASURE_WATCH = ITEMS.register("treasure_watch",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CRYSTAL_TREASURE_WATCH = ITEMS.register("crystal_treasure_watch",
+    public static final RegistryObject<Item> CRYSTAL_WATCH = ITEMS.register("crystal_watch",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> YOKAI_WATCH_ANCESTRALE = ITEMS.register("yokai_watch_ancestrale",
@@ -61,6 +61,15 @@ public class ModItems {
     public static final RegistryObject<Item> ENMA_BLADE = ITEMS.register("enma_blade",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ENCHANTED_FLUTE = ITEMS.register("enchanted_flute",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BOOSTOKAI = ITEMS.register("boostokai",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PISTOKIT = ITEMS.register("pistokit",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SABROKIT = ITEMS.register("sabrokit",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HUEDROID = ITEMS.register("huedroid",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> FRAGMENT_DE_YOKAI = ITEMS.register("fragment_de_yokai",
@@ -102,6 +111,8 @@ public class ModItems {
     public static final RegistryObject<Item> CLEYOKANTIK = ITEMS.register("cleyokantik",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CLEYOLCANIK = ITEMS.register("cleyolcanik",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOKANSTRALE = ITEMS.register("cleyokanstrale",
             () -> new Item(new Item.Properties()));
 
 

@@ -28,7 +28,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.YOKAI_WATCH_UE.get());
                         output.accept(ModItems.YOKAI_WATCH_REVE.get());
                         output.accept(ModItems.TREASURE_WATCH.get());
-                        output.accept(ModItems.CRYSTAL_TREASURE_WATCH.get());
+                        output.accept(ModItems.CRYSTAL_WATCH.get());
 
                         output.accept(ModItems.YOKAI_WATCH_ANCESTRALE.get());
                         output.accept(ModItems.YOKAI_WATCH_ANCESTRALE_N.get());
@@ -45,6 +45,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.YOKAI_BAZOOKA.get());
                         output.accept(ModItems.ENMA_BLADE.get());
                         output.accept(ModItems.ENCHANTED_FLUTE.get());
+
+                        output.accept(ModItems.BOOSTOKAI.get());
+                        output.accept(ModItems.PISTOKIT.get());
+                        output.accept(ModItems.SABROKIT.get());
+                        output.accept(ModItems.HUEDROID.get());
 
                         output.accept(ModItems.FRAGMENT_DE_YOKAI.get());
                         output.accept(ModItems.VIEIL_ENGRENAGE.get());
@@ -68,6 +73,7 @@ public class ModCreativeModTabs {
 
                         output.accept(ModItems.CLEYOKANTIK.get());
                         output.accept(ModItems.CLEYOLCANIK.get());
+                        output.accept(ModItems.CLEYOKANSTRALE.get());
 
 
                         output.accept(ModBlocks.BLOC_DE_MAGNETITE.get());

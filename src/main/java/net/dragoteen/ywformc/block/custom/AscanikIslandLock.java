@@ -39,57 +39,73 @@ public class AscanikIslandLock extends Block {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
                                  Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
 
-        // SEULEMENT CÔTÉ SERVEUR (pas client)
         if (!pLevel.isClientSide()) {
-            ItemStack heldItem = pPlayer.getItemInHand(pHand); // Item tenu par le joueur
-
-            // Récupérer l'état actuel du bloc
+            ItemStack heldItem = pPlayer.getItemInHand(pHand);
             boolean isLockedCleyokantik = pState.getValue(LOCKED_CLEYOKANTIK);
             boolean isLockedCleyolcanik = pState.getValue(LOCKED_CLEYOLCANIK);
 
-            // === CAS 1 : Joueur utilise CLEYOKANTIK sur bloc NON verrouillé ===
-            if (heldItem.getItem() == ModItems.CLEYOKANTIK.get() && !isLockedCleyokantik) {
-                heldItem.shrink(1); // Enlève 1 exemplaire de l'item
-                if (heldItem.isEmpty()) {
-                    pPlayer.setItemInHand(pHand, ItemStack.EMPTY); // Vide la main si stack à 0
+            // === RETIRER CLÉ AVEC MAIN VIDE ===
+            if ((isLockedCleyokantik || isLockedCleyolcanik) && heldItem.isEmpty()) {
+                if (isLockedCleyokantik) {
+                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3);
+                } else if (isLockedCleyolcanik) {
+                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOLCANIK.get()));
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOLCANIK, false), 3);
                 }
-
-                // Change l'état : verrouillé avec cleyokantik seulement
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, true)
-                        .setValue(LOCKED_CLEYOLCANIK, false), 3);
-                return InteractionResult.CONSUME; // Item consommé
+                return InteractionResult.SUCCESS;
             }
 
-            // === CAS 2 : Joueur utilise CLEYOLCANIK sur bloc NON verrouillé ===
-            if (heldItem.getItem() == ModItems.CLEYOLCANIK.get() && !isLockedCleyolcanik) {
+            // === 1er : Vérifier si BLOC VERROUILLÉ + clé différente = CHANGEMENT ===
+            if (isLockedCleyokantik && heldItem.getItem() == ModItems.CLEYOLCANIK.get()) {
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
                 heldItem.shrink(1);
-                if (heldItem.isEmpty()) {
-                    pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                }
-
-                // Change l'état : verrouillé avec cleyolcanik seulement
+                if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
                 pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false)
                         .setValue(LOCKED_CLEYOLCANIK, true), 3);
                 return InteractionResult.CONSUME;
             }
-
-            // === CAS 3 : Bloc verrouillé avec CLEYOKANTIK → rendre l'item ===
-            if (isLockedCleyokantik && !isLockedCleyolcanik) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get())); // Donne l'item au joueur
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3); // Déverrouille
-                return InteractionResult.SUCCESS;
+            if (isLockedCleyolcanik && heldItem.getItem() == ModItems.CLEYOKANTIK.get()) {
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOLCANIK.get()));
+                heldItem.shrink(1);
+                if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, true)
+                        .setValue(LOCKED_CLEYOLCANIK, false), 3);
+                return InteractionResult.CONSUME;
             }
 
-            // === CAS 4 : Bloc verrouillé avec CLEYOLCANIK → rendre l'item ===
-            if (isLockedCleyolcanik && !isLockedCleyokantik) {
+            // === 2e : Vérifier si BLOC VERROUILLÉ + même clé = DÉVERROUILLAGE ===
+            if (isLockedCleyokantik && heldItem.getItem() == ModItems.CLEYOKANTIK.get()) {
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3);
+                return InteractionResult.SUCCESS;
+            }
+            if (isLockedCleyolcanik && heldItem.getItem() == ModItems.CLEYOLCANIK.get()) {
                 giveItem(pPlayer, new ItemStack(ModItems.CLEYOLCANIK.get()));
                 pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOLCANIK, false), 3);
                 return InteractionResult.SUCCESS;
             }
+
+            // === 3e : Bloc NON verrouillé = VERROUILLAGE ===
+            if (!isLockedCleyokantik && heldItem.getItem() == ModItems.CLEYOKANTIK.get()) {
+                heldItem.shrink(1);
+                if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, true)
+                        .setValue(LOCKED_CLEYOLCANIK, false), 3);
+                return InteractionResult.CONSUME;
+            }
+            if (!isLockedCleyolcanik && heldItem.getItem() == ModItems.CLEYOLCANIK.get()) {
+                heldItem.shrink(1);
+                if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false)
+                        .setValue(LOCKED_CLEYOLCANIK, true), 3);
+                return InteractionResult.CONSUME;
+            }
         }
 
-        return InteractionResult.SUCCESS; // Par défaut
+        return InteractionResult.SUCCESS;
     }
+
 
     // Méthode utilitaire : donne un item au joueur
     private void giveItem(Player pPlayer, ItemStack pItemStack) {
