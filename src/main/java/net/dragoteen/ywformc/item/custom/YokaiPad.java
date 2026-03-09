@@ -1,4 +1,4 @@
-package net.dragoteen.ywfmc.item.custom;
+package net.dragoteen.ywformc.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;

@@ -1,7 +1,7 @@
-package net.dragoteen.ywfmc.item;
+package net.dragoteen.ywformc.item;
 
-import net.dragoteen.ywfmc.YoKaiWatchForMinecraftMod;
-import net.dragoteen.ywfmc.item.custom.YokaiPad;
+import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywformc.item.custom.YokaiPad;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

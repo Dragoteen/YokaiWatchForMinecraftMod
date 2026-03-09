@@ -1,7 +1,7 @@
-package net.dragoteen.ywfmc.item;
+package net.dragoteen.ywformc.item;
 
-import net.dragoteen.ywfmc.YoKaiWatchForMinecraftMod;
-import net.dragoteen.ywfmc.block.ModBlocks;
+import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywformc.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

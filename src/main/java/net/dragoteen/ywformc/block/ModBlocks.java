@@ -1,8 +1,8 @@
-package net.dragoteen.ywfmc.block;
+package net.dragoteen.ywformc.block;
 
-import net.dragoteen.ywfmc.YoKaiWatchForMinecraftMod;
-import net.dragoteen.ywfmc.block.custom.AscanikIslandLock;
-import net.dragoteen.ywfmc.item.ModItems;
+import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywformc.block.custom.AscanikIslandLock;
+import net.dragoteen.ywformc.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
