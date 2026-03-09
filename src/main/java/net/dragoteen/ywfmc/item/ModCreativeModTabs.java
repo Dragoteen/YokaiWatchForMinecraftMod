@@ -37,17 +37,14 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.YOKAI_WATCH_OGRE.get());
                         output.accept(ModItems.YOKAI_WATCH_ANIMUS.get());
 
+                        output.accept(ModItems.YOKAI_PAD.get());
+
                         output.accept(ModItems.BLASTER_YOKAI.get());
                         output.accept(ModItems.FOREUSE_YOKAI.get());
                         output.accept(ModItems.ASPIRATEUR_YOKAI.get());
                         output.accept(ModItems.YOKAI_BAZOOKA.get());
                         output.accept(ModItems.ENMA_BLADE.get());
                         output.accept(ModItems.ENCHANTED_FLUTE.get());
-
-                        output.accept(ModItems.MEDALLIUM.get());
-                        output.accept(ModItems.YOVNIKAI_WATCH.get());
-                        output.accept(ModItems.CLE_YOKAI_WORLD.get());
-                        output.accept(ModItems.TELEMIR_POCHE.get());
 
                         output.accept(ModItems.FRAGMENT_DE_YOKAI.get());
                         output.accept(ModItems.VIEIL_ENGRENAGE.get());
@@ -64,9 +61,18 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.EXTREME_LAPIS.get());
                         output.accept(ModItems.EXTREME_GOLD.get());
 
+                        output.accept(ModItems.MEDALLIUM.get());
+                        output.accept(ModItems.YOVNIKAI_WATCH.get());
+                        output.accept(ModItems.CLE_YOKAI_WORLD.get());
+                        output.accept(ModItems.TELEMIR_POCHE.get());
+
+                        output.accept(ModItems.CLEYOKANTIK.get());
+                        output.accept(ModItems.CLEYOLCANIK.get());
+
 
                         output.accept(ModBlocks.BLOC_DE_MAGNETITE.get());
                         output.accept(ModBlocks.WATCHMAKERS_WORKBENCH.get());
+                        output.accept(ModBlocks.ASCANIK_ISLAND_LOCK.get());
                     })
                     .build());
 

@@ -1,7 +1,7 @@
 package net.dragoteen.ywfmc.block;
 
-import jdk.jfr.Frequency;
 import net.dragoteen.ywfmc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywfmc.block.custom.AscanikIslandLock;
 import net.dragoteen.ywfmc.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,7 +26,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BELL)));
 
     public static final RegistryObject<Block> WATCHMAKERS_WORKBENCH = registryBlock("watchmakers_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).mapColor(MapColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).mapColor(MapColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> ASCANIK_ISLAND_LOCK = registryBlock("ascanik_island_lock",
+            () -> new AscanikIslandLock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).mapColor(MapColor.COLOR_BLACK).noCollission().requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
 
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block) {

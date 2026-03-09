@@ -48,7 +48,11 @@
   "item.ywformc.cle_yokai_world": "Clé du Yo-kai World",
   "item.ywformc.telemir_poche": "Télémir de Poche",
 
+  "item.ywformc.cleyokantik": "Cléyokantik",
+  "item.ywformc.cleyolcanik": "Cléyolcanik",
+
 
   "block.ywformc.bloc_de_magnetite": "Bloc de Magnétite",
-  "block.ywformc.watchmakers_workbench": "Établi d'horlogerie"
+  "block.ywformc.watchmakers_workbench": "Établi d'horlogerie",
+  "block.ywformc.ascanik_island_lock": "Serrure de l'Île Ascanik"
 }

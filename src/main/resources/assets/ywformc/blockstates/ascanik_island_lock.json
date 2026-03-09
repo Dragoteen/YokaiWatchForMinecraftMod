@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "locked_cleyokantik=false,locked_cleyolcanik=false": { "model": "ywformc:block/ascanik_island_lock" },
+    "locked_cleyokantik=true,locked_cleyolcanik=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokantik" },
+    "locked_cleyokantik=false,locked_cleyolcanik=true":  { "model": "ywformc:block/ascanik_island_lock_cleyolcanik" }
+  }
+}

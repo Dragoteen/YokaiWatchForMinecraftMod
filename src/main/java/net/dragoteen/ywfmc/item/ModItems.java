@@ -99,6 +99,11 @@ public class ModItems {
     public static final RegistryObject<Item> TELEMIR_POCHE = ITEMS.register("telemir_poche",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CLEYOKANTIK = ITEMS.register("cleyokantik",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOLCANIK = ITEMS.register("cleyolcanik",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
