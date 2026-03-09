@@ -1,6 +1,7 @@
 package net.dragoteen.ywfmc.item;
 
 import net.dragoteen.ywfmc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywfmc.item.custom.YokaiPad;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -45,6 +46,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_ANIMUS = ITEMS.register("yokai_watch_animus",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YOKAI_PAD= ITEMS.register("yokai_pad",
+            () -> new YokaiPad(new Item.Properties()));
 
     public static final RegistryObject<Item> BLASTER_YOKAI = ITEMS.register("blaster_yokai",
             () -> new Item(new Item.Properties()));
