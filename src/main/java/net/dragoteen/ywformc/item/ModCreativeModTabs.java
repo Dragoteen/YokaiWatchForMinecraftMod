@@ -74,6 +74,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.CLEYOKANTIK.get());
                         output.accept(ModItems.CLEYOLCANIK.get());
                         output.accept(ModItems.CLEYOKANSTRALE.get());
+                        output.accept(ModItems.CLEYOKOURAGE.get());
+                        output.accept(ModItems.CLEYOKONNAISSANCE.get());
 
 
                         output.accept(ModBlocks.BLOC_DE_MAGNETITE.get());

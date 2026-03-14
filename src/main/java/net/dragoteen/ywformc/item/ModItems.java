@@ -114,6 +114,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CLEYOKANSTRALE = ITEMS.register("cleyokanstrale",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOKOURAGE = ITEMS.register("cleyokourage",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOKONNAISSANCE = ITEMS.register("cleyokonnaissance",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
