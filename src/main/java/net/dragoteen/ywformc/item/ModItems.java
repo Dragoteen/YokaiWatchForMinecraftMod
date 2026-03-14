@@ -69,6 +69,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SABROKIT = ITEMS.register("sabrokit",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CARAKIT = ITEMS.register("carakit",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HUEDROID = ITEMS.register("huedroid",
             () -> new Item(new Item.Properties()));
 

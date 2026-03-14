@@ -49,6 +49,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.BOOSTOKAI.get());
                         output.accept(ModItems.PISTOKIT.get());
                         output.accept(ModItems.SABROKIT.get());
+                        output.accept(ModItems.CARAKIT.get());
                         output.accept(ModItems.HUEDROID.get());
 
                         output.accept(ModItems.FRAGMENT_DE_YOKAI.get());
