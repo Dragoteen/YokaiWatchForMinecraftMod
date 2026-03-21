@@ -2,7 +2,10 @@ package net.dragoteen.ywformc.item;
 
 import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
 import net.dragoteen.ywformc.item.custom.YokaiPad;
+import net.dragoteen.ywformc.sound.ModSounds;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.RecordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -120,6 +123,72 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CLEYOKONNAISSANCE = ITEMS.register("cleyokonnaissance",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOFORCE = ITEMS.register("cleyoforce",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> UPTOWN_SPRINGDALE_THEME_DISC = ITEMS.register("uptown_springdale_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.UPTOWN_SPRINGDALE_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2200));
+    public static final RegistryObject<Item> MOUNT_WILDWOOD_THEME_DISC = ITEMS.register("mount_wildwood_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.MOUNT_WILDWOOD_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2740));
+    public static final RegistryObject<Item> BLOSSOM_HEIGHTS_THEME_DISC = ITEMS.register("blossom_heights_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.BLOSSOM_HEIGHTS_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2640));
+    public static final RegistryObject<Item> SHOPPERS_ROW_THEME_DISC = ITEMS.register("shoppers_row_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.SHOPPERS_ROW_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2420));
+    public static final RegistryObject<Item> DOWNTOWN_SPRINGDALE_THEME_DISC = ITEMS.register("downtown_springdale_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.DOWNTOWN_SPRINGDALE_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2240));
+    public static final RegistryObject<Item> BREEZY_HILLS_THEME_DISC = ITEMS.register("breezy_hills_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.BREEZY_HILLS_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    2740));
+    public static final RegistryObject<Item> EXCELLENT_TOWER_THEME_DISC = ITEMS.register("excellent_tower_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.EXCELLENT_TOWER_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    1600));
+    public static final RegistryObject<Item> SPARKOPOLIS_THEME_DISC = ITEMS.register("sparkopolis_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.SPARKOPOLIS_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    1900));
+    public static final RegistryObject<Item> YOKAI_WORLD_THEME_DISC = ITEMS.register("yokai_world_theme_disc",
+            () -> new RecordItem(6,
+                    ModSounds.YOKAI_WORLD_THEME,
+                    new  Item.Properties()
+                            .stacksTo(1)
+                            .rarity(Rarity.RARE),
+                    1180));
 
 
     public static void register(IEventBus eventBus) {

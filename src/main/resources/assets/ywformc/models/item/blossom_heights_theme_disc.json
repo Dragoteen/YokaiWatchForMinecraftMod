@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ywformc:item/blossom_heights_theme_disc"
+  }
+}

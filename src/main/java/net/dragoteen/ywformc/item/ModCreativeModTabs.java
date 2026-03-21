@@ -77,6 +77,17 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.CLEYOKANSTRALE.get());
                         output.accept(ModItems.CLEYOKOURAGE.get());
                         output.accept(ModItems.CLEYOKONNAISSANCE.get());
+                        output.accept(ModItems.CLEYOFORCE.get());
+
+                        output.accept(ModItems.UPTOWN_SPRINGDALE_THEME_DISC.get());
+                        output.accept(ModItems.MOUNT_WILDWOOD_THEME_DISC.get());
+                        output.accept(ModItems.BLOSSOM_HEIGHTS_THEME_DISC.get());
+                        output.accept(ModItems.SHOPPERS_ROW_THEME_DISC.get());
+                        output.accept(ModItems.DOWNTOWN_SPRINGDALE_THEME_DISC.get());
+                        output.accept(ModItems.BREEZY_HILLS_THEME_DISC.get());
+                        output.accept(ModItems.EXCELLENT_TOWER_THEME_DISC.get());
+                        output.accept(ModItems.SPARKOPOLIS_THEME_DISC.get());
+                        output.accept(ModItems.YOKAI_WORLD_THEME_DISC.get());
 
 
                         output.accept(ModBlocks.BLOC_DE_MAGNETITE.get());

@@ -27,8 +27,9 @@ public class AscanikIslandLock extends Block {
     public static final BooleanProperty LOCKED_CLEYOKANTIK = BooleanProperty.create("locked_cleyokantik");
     public static final BooleanProperty LOCKED_CLEYOLCANIK = BooleanProperty.create("locked_cleyolcanik");
     public static final BooleanProperty LOCKED_CLEYOKANSTRALE = BooleanProperty.create("locked_cleyokanstrale");
-    public static final BooleanProperty LOCKED_CLEYOKOURAGE = BooleanProperty.create("locked_cleyokourage");        // ✅ NOUVEAU
-    public static final BooleanProperty LOCKED_CLEYOKONNAISSANCE = BooleanProperty.create("locked_cleyokonnaissance"); // ✅ NOUVEAU
+    public static final BooleanProperty LOCKED_CLEYOKOURAGE = BooleanProperty.create("locked_cleyokourage");
+    public static final BooleanProperty LOCKED_CLEYOKONNAISSANCE = BooleanProperty.create("locked_cleyokonnaissance");
+    public static final BooleanProperty LOCKED_CLEYOFORCE = BooleanProperty.create("locked_cleyoforce"); // ✅ NOUVEAU
 
     public AscanikIslandLock(Properties pProperties) {
         super(pProperties);
@@ -37,8 +38,9 @@ public class AscanikIslandLock extends Block {
                 .setValue(LOCKED_CLEYOKANTIK, false)
                 .setValue(LOCKED_CLEYOLCANIK, false)
                 .setValue(LOCKED_CLEYOKANSTRALE, false)
-                .setValue(LOCKED_CLEYOKOURAGE, false)           // ✅ NOUVEAU
-                .setValue(LOCKED_CLEYOKONNAISSANCE, false));    // ✅ NOUVEAU
+                .setValue(LOCKED_CLEYOKOURAGE, false)
+                .setValue(LOCKED_CLEYOKONNAISSANCE, false)
+                .setValue(LOCKED_CLEYOFORCE, false));
     }
 
     @Override
@@ -50,12 +52,13 @@ public class AscanikIslandLock extends Block {
             boolean isLockedCleyokantik = pState.getValue(LOCKED_CLEYOKANTIK);
             boolean isLockedCleyolcanik = pState.getValue(LOCKED_CLEYOLCANIK);
             boolean isLockedCleyokanstrale = pState.getValue(LOCKED_CLEYOKANSTRALE);
-            boolean isLockedCleyokourage = pState.getValue(LOCKED_CLEYOKOURAGE);           // ✅ NOUVEAU
-            boolean isLockedCleyokonnaissance = pState.getValue(LOCKED_CLEYOKONNAISSANCE); // ✅ NOUVEAU
+            boolean isLockedCleyokourage = pState.getValue(LOCKED_CLEYOKOURAGE);
+            boolean isLockedCleyokonnaissance = pState.getValue(LOCKED_CLEYOKONNAISSANCE);
+            boolean isLockedCleyoforce = pState.getValue(LOCKED_CLEYOFORCE); // ✅ NOUVEAU
 
             // === RETIRER CLÉ AVEC MAIN VIDE ===
             if ((isLockedCleyokantik || isLockedCleyolcanik || isLockedCleyokanstrale ||
-                    isLockedCleyokourage || isLockedCleyokonnaissance) && heldItem.isEmpty()) {
+                    isLockedCleyokourage || isLockedCleyokonnaissance || isLockedCleyoforce) && heldItem.isEmpty()) {
                 if (isLockedCleyokantik) {
                     giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
                     pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3);
@@ -65,12 +68,15 @@ public class AscanikIslandLock extends Block {
                 } else if (isLockedCleyokanstrale) {
                     giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANSTRALE.get()));
                     pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, false), 3);
-                } else if (isLockedCleyokourage) {                                            // ✅ NOUVEAU
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));            // ✅ NOUVEAU
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);    // ✅ NOUVEAU
-                } else if (isLockedCleyokonnaissance) {                                       // ✅ NOUVEAU
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));       // ✅ NOUVEAU
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3); // ✅ NOUVEAU
+                } else if (isLockedCleyokourage) {
+                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);
+                } else if (isLockedCleyokonnaissance) {
+                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3);
+                } else if (isLockedCleyoforce) {                                       // ✅ NOUVEAU
+                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOFORCE.get()));       // ✅ NOUVEAU
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, false), 3); // ✅ NOUVEAU
                 }
                 return InteractionResult.SUCCESS;
             }
@@ -93,20 +99,25 @@ public class AscanikIslandLock extends Block {
                 pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, false), 3);
                 return InteractionResult.SUCCESS;
             }
-            if (isLockedCleyokourage && heldItemType == ModItems.CLEYOKOURAGE.get()) {         // ✅ NOUVEAU
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));                 // ✅ NOUVEAU
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);         // ✅ NOUVEAU
+            if (isLockedCleyokourage && heldItemType == ModItems.CLEYOKOURAGE.get()) {
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);
                 return InteractionResult.SUCCESS;
             }
-            if (isLockedCleyokonnaissance && heldItemType == ModItems.CLEYOKONNAISSANCE.get()) { // ✅ NOUVEAU
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));            // ✅ NOUVEAU
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3);    // ✅ NOUVEAU
+            if (isLockedCleyokonnaissance && heldItemType == ModItems.CLEYOKONNAISSANCE.get()) {
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3);
+                return InteractionResult.SUCCESS;
+            }
+            if (isLockedCleyoforce && heldItemType == ModItems.CLEYOFORCE.get()) {      // ✅ NOUVEAU
+                giveItem(pPlayer, new ItemStack(ModItems.CLEYOFORCE.get()));            // ✅ NOUVEAU
+                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, false), 3);    // ✅ NOUVEAU
                 return InteractionResult.SUCCESS;
             }
 
             // === VERROUILLAGE (bloc vide) ===
             if (!isLockedCleyokantik && !isLockedCleyolcanik && !isLockedCleyokanstrale &&
-                    !isLockedCleyokourage && !isLockedCleyokonnaissance) {
+                    !isLockedCleyokourage && !isLockedCleyokonnaissance && !isLockedCleyoforce) {
                 if (heldItemType == ModItems.CLEYOKANTIK.get()) {
                     heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
                     pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, true), 3);
@@ -122,14 +133,19 @@ public class AscanikIslandLock extends Block {
                     pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, true), 3);
                     return InteractionResult.CONSUME;
                 }
-                if (heldItemType == ModItems.CLEYOKOURAGE.get()) {                            // ✅ NOUVEAU
+                if (heldItemType == ModItems.CLEYOKOURAGE.get()) {
                     heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, true), 3);     // ✅ NOUVEAU
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, true), 3);
                     return InteractionResult.CONSUME;
                 }
-                if (heldItemType == ModItems.CLEYOKONNAISSANCE.get()) {                       // ✅ NOUVEAU
+                if (heldItemType == ModItems.CLEYOKONNAISSANCE.get()) {
                     heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, true), 3); // ✅ NOUVEAU
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, true), 3);
+                    return InteractionResult.CONSUME;
+                }
+                if (heldItemType == ModItems.CLEYOFORCE.get()) {                       // ✅ NOUVEAU
+                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
+                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, true), 3); // ✅ NOUVEAU
                     return InteractionResult.CONSUME;
                 }
             }
@@ -146,7 +162,7 @@ public class AscanikIslandLock extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(FACING, LOCKED_CLEYOKANTIK, LOCKED_CLEYOLCANIK, LOCKED_CLEYOKANSTRALE,
-                LOCKED_CLEYOKOURAGE, LOCKED_CLEYOKONNAISSANCE);  // ✅ NOUVEAU
+                LOCKED_CLEYOKOURAGE, LOCKED_CLEYOKONNAISSANCE, LOCKED_CLEYOFORCE);  // ✅ NOUVEAU
     }
 
     @Override

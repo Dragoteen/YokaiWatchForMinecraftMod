@@ -1,33 +1,38 @@
 {
   "variants": {
-    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock" },
-    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock","y": 180 },
-    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock","y": 90 },
-    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock","y": 270 },
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock","y": 270 },
 
-    "facing=north,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokantik" },
-    "facing=south,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 180 },
-    "facing=east,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 90 },
-    "facing=west,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 270 },
+    "facing=north,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokantik" },
+    "facing=south,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 180 },
+    "facing=east,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 90 },
+    "facing=west,locked_cleyokantik=true,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokantik","y": 270 },
 
-    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false":  { "model": "ywformc:block/ascanik_island_lock_cleyolcanik" },
-    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 180 },
-    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 90 },
-    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 270 },
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false":  { "model": "ywformc:block/ascanik_island_lock_cleyolcanik" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=true,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyolcanik","y": 270 },
 
-    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale" },
-    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 180 },
-    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 90 },
-    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 270 },
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=true,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokanstrale","y": 270 },
 
-    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokourage" },
-    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 180 },
-    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 90 },
-    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 270 },
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false,locked_cleyoforce=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokourage" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=true,locked_cleyokonnaissance=false,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokourage","y": 270 },
 
-    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true":  { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance" },
-    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 180 },
-    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 90 },
-    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 270 }
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true,locked_cleyoforce=false":  { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=true,locked_cleyoforce=false": { "model": "ywformc:block/ascanik_island_lock_cleyokonnaissance","y": 270 },
+
+    "facing=north,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=true":  { "model": "ywformc:block/ascanik_island_lock_cleyoforce" },
+    "facing=south,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=true": { "model": "ywformc:block/ascanik_island_lock_cleyoforce","y": 180 },
+    "facing=east,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=true": { "model": "ywformc:block/ascanik_island_lock_cleyoforce","y": 90 },
+    "facing=west,locked_cleyokantik=false,locked_cleyolcanik=false,locked_cleyokanstrale=false,locked_cleyokourage=false,locked_cleyokonnaissance=false,locked_cleyoforce=true": { "model": "ywformc:block/ascanik_island_lock_cleyoforce","y": 270 }
   }
 }

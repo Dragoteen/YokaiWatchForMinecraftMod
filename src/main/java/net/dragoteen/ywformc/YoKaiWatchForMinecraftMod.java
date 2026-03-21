@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.dragoteen.ywformc.block.ModBlocks;
 import net.dragoteen.ywformc.item.ModCreativeModTabs;
 import net.dragoteen.ywformc.item.ModItems;
+import net.dragoteen.ywformc.sound.ModSounds;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -65,6 +66,8 @@ public class YoKaiWatchForMinecraftMod
         ModItems.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         ModCreativeModTabs.CREATIVE_MODE_TABS.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

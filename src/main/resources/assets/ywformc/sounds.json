@@ -1,0 +1,74 @@
+{
+  "uptown_springdale_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:uptown_springdale_theme",
+        "stream": true
+      }
+    ]
+  },
+  "mount_wildwood_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:mount_wildwood_theme",
+        "stream": true
+      }
+    ]
+  },
+  "blossom_heights_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:blossom_heights_theme",
+        "stream": true
+      }
+    ]
+  },
+  "shoppers_row_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:shoppers_row_theme",
+        "stream": true
+      }
+    ]
+  },
+  "downtown_springdale_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:downtown_springdale_theme",
+        "stream": true
+      }
+    ]
+  },
+  "breezy_hills_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:breezy_hills_theme",
+        "stream": true
+      }
+    ]
+  },
+  "excellent_tower_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:excellent_tower_theme",
+        "stream": true
+      }
+    ]
+  },
+  "sparkopolis_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:sparkopolis_theme",
+        "stream": true
+      }
+    ]
+  },
+  "yokai_world_theme": {
+    "sounds": [
+      {
+        "name": "ywformc:yokai_world_theme",
+        "stream": true
+      }
+    ]
+  }
+}
