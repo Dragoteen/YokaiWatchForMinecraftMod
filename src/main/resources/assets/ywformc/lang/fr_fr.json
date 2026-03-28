@@ -69,5 +69,6 @@
 
   "block.ywformc.bloc_de_magnetite": "Bloc de Magnétite",
   "block.ywformc.watchmakers_workbench": "Établi d'horlogerie",
-  "block.ywformc.ascanik_island_lock": "Serrure de l'Île Ascanik"
+  "block.ywformc.ascanik_island_lock": "Serrure de l'Île Ascanik",
+  "block.ywformc.ascanik_island_door": "Porte de l'Île Ascanik"
 }

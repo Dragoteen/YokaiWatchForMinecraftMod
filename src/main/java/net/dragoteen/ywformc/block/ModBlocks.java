@@ -1,6 +1,7 @@
 package net.dragoteen.ywformc.block;
 
 import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywformc.block.custom.AscanikIslandDoor;
 import net.dragoteen.ywformc.block.custom.AscanikIslandLock;
 import net.dragoteen.ywformc.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -28,7 +29,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> WATCHMAKERS_WORKBENCH = registryBlock("watchmakers_workbench",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).mapColor(MapColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final RegistryObject<Block> ASCANIK_ISLAND_LOCK = registryBlock("ascanik_island_lock",
-            () -> new AscanikIslandLock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).mapColor(MapColor.COLOR_BLACK).noCollission().requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            () -> new AscanikIslandLock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).mapColor(MapColor.COLOR_BLACK).noCollission().requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> ASCANIK_ISLAND_DOOR = registryBlock("ascanik_island_door",
+            () -> new AscanikIslandDoor(BlockBehaviour.Properties.copy(Blocks.BEDROCK).mapColor(MapColor.COLOR_LIGHT_GRAY).noCollission().requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block) {

@@ -93,6 +93,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.BLOC_DE_MAGNETITE.get());
                         output.accept(ModBlocks.WATCHMAKERS_WORKBENCH.get());
                         output.accept(ModBlocks.ASCANIK_ISLAND_LOCK.get());
+                        output.accept(ModBlocks.ASCANIK_ISLAND_DOOR.get());
                     })
                     .build());
 

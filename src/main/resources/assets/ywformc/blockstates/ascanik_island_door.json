@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=north,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door" },
+    "facing=south,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 180 },
+    "facing=east,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 90 },
+    "facing=west,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 270 },
+
+    "facing=north,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1" },
+    "facing=south,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 180 },
+    "facing=east,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 90 },
+    "facing=west,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 270 },
+
+    "facing=north,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2" },
+    "facing=south,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 180 },
+    "facing=east,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 90 },
+    "facing=west,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 270 }
+  }
+}
