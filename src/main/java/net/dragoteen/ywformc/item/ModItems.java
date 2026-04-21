@@ -1,11 +1,14 @@
 package net.dragoteen.ywformc.item;
 
 import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
+import net.dragoteen.ywformc.entity.ModEntities;
 import net.dragoteen.ywformc.item.custom.YokaiPad;
+import net.dragoteen.ywformc.item.custom.YokaiWatch;
 import net.dragoteen.ywformc.sound.ModSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.RecordItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,25 +20,25 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> YOKAI_WATCH = ITEMS.register("yokai_watch",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_POCHE = ITEMS.register("yokai_watch_poche",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_ZERO = ITEMS.register("yokai_watch_zero",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_PROTOTYPE_U = ITEMS.register("yokai_watch_prototype_u",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_U1 = ITEMS.register("yokai_watch_u1",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_U2 = ITEMS.register("yokai_watch_u2",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_UE = ITEMS.register("yokai_watch_ue",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> YOKAI_WATCH_REVE = ITEMS.register("yokai_watch_reve",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> TREASURE_WATCH = ITEMS.register("treasure_watch",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
     public static final RegistryObject<Item> CRYSTAL_WATCH = ITEMS.register("crystal_watch",
-            () -> new Item(new Item.Properties()));
+            () -> new YokaiWatch(new Item.Properties()));
 
     public static final RegistryObject<Item> YOKAI_WATCH_ANCESTRALE = ITEMS.register("yokai_watch_ancestrale",
             () -> new Item(new Item.Properties()));
@@ -125,6 +128,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CLEYOFORCE = ITEMS.register("cleyoforce",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOTERRE = ITEMS.register("cleyoterre",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLEYOVENT = ITEMS.register("cleyovent",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> UPTOWN_SPRINGDALE_THEME_DISC = ITEMS.register("uptown_springdale_theme_disc",
             () -> new RecordItem(6,
@@ -189,7 +196,6 @@ public class ModItems {
                             .stacksTo(1)
                             .rarity(Rarity.RARE),
                     1180));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

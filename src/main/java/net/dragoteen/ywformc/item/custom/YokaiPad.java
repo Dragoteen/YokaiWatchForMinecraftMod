@@ -17,7 +17,13 @@ public class YokaiPad extends Item {
 
     public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
 
+        player.sendSystemMessage(Component.literal(""));
+        player.sendSystemMessage(Component.literal("§a-------------------------"));
+        player.sendSystemMessage(Component.literal(""));
         player.sendSystemMessage(Component.literal("§aYo-kai Pad ouvert !"));
+        player.sendSystemMessage(Component.literal(""));
+        player.sendSystemMessage(Component.literal("§a-------------------------"));
+        player.sendSystemMessage(Component.literal(""));
 
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }

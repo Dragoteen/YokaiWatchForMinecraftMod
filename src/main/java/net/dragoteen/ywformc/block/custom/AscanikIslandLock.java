@@ -3,6 +3,7 @@ package net.dragoteen.ywformc.block.custom;
 import net.dragoteen.ywformc.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -17,30 +18,76 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
+
+import java.util.Map;
 
 public class AscanikIslandLock extends Block {
 
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
 
-    // États du bloc : true = verrouillé avec cet item
-    public static final BooleanProperty LOCKED_CLEYOKANTIK = BooleanProperty.create("locked_cleyokantik");
-    public static final BooleanProperty LOCKED_CLEYOLCANIK = BooleanProperty.create("locked_cleyolcanik");
-    public static final BooleanProperty LOCKED_CLEYOKANSTRALE = BooleanProperty.create("locked_cleyokanstrale");
-    public static final BooleanProperty LOCKED_CLEYOKOURAGE = BooleanProperty.create("locked_cleyokourage");
-    public static final BooleanProperty LOCKED_CLEYOKONNAISSANCE = BooleanProperty.create("locked_cleyokonnaissance");
-    public static final BooleanProperty LOCKED_CLEYOFORCE = BooleanProperty.create("locked_cleyoforce"); // ✅ NOUVEAU
+    public enum LockState implements StringRepresentable {
+        EMPTY("empty"),
+        CLEYOKANTIK("cleyokantik"),
+        CLEYOLCANIK("cleyolcanik"),
+        CLEYOKANSTRALE("cleyokanstrale"),
+        CLEYOKOURAGE("cleyokourage"),
+        CLEYOKONNAISSANCE("cleyokonnaissance"),
+        CLEYOFORCE("cleyoforce"),
+        CLEYOTERRE("cleyoterre"),
+        CLEYOVENT("cleyovent");
+
+        private final String name;
+        LockState(String name) { this.name = name; }
+
+        @Override
+        public String getSerializedName() { return name; }
+    }
+
+    public static final EnumProperty<LockState> LOCKED = EnumProperty.create("locked", LockState.class);
+
+    private static final Map<LockState, AscanikIslandDoor.DoorState> LOCK_TO_DOOR = Map.of(
+            LockState.EMPTY, AscanikIslandDoor.DoorState.LOCKED,
+            LockState.CLEYOKANTIK, AscanikIslandDoor.DoorState.MYSTERIK_TEMPLE,
+            LockState.CLEYOLCANIK, AscanikIslandDoor.DoorState.MOUNT_ARDENT,
+            LockState.CLEYOKANSTRALE, AscanikIslandDoor.DoorState.ANCIENT_WRECK,
+            LockState.CLEYOKOURAGE, AscanikIslandDoor.DoorState.COURAGE_STATUE,
+            LockState.CLEYOKONNAISSANCE, AscanikIslandDoor.DoorState.KNOWLEDGE_STATUE,
+            LockState.CLEYOFORCE, AscanikIslandDoor.DoorState.STRENGTH_STATUE,
+            LockState.CLEYOTERRE, AscanikIslandDoor.DoorState.TERRESTRIAL_PART,
+            LockState.CLEYOVENT, AscanikIslandDoor.DoorState.WINDY_PART
+    );
+
+    private static final Map<LockState, java.util.function.Supplier<Item>> LOCK_TO_ITEM = Map.of(
+            LockState.CLEYOKANTIK,      () -> ModItems.CLEYOKANTIK.get(),
+            LockState.CLEYOLCANIK,      () -> ModItems.CLEYOLCANIK.get(),
+            LockState.CLEYOKANSTRALE,   () -> ModItems.CLEYOKANSTRALE.get(),
+            LockState.CLEYOKOURAGE,     () -> ModItems.CLEYOKOURAGE.get(),
+            LockState.CLEYOKONNAISSANCE,() -> ModItems.CLEYOKONNAISSANCE.get(),
+            LockState.CLEYOFORCE,       () -> ModItems.CLEYOFORCE.get(),
+            LockState.CLEYOTERRE,       () -> ModItems.CLEYOTERRE.get(),
+            LockState.CLEYOVENT,       () -> ModItems.CLEYOVENT.get()
+    );
 
     public AscanikIslandLock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
-                .setValue(LOCKED_CLEYOKANTIK, false)
-                .setValue(LOCKED_CLEYOLCANIK, false)
-                .setValue(LOCKED_CLEYOKANSTRALE, false)
-                .setValue(LOCKED_CLEYOKOURAGE, false)
-                .setValue(LOCKED_CLEYOKONNAISSANCE, false)
-                .setValue(LOCKED_CLEYOFORCE, false));
+                .setValue(LOCKED, LockState.EMPTY));
+    }
+
+    private void checkAndOpenDoor(Level pLevel, BlockPos pPos, LockState lockState) {
+        AscanikIslandDoor.DoorState doorState = LOCK_TO_DOOR.get(lockState);
+        if (doorState == null) return;
+
+        BlockPos doorPos = pPos.north(3);
+        BlockState blockState = pLevel.getBlockState(doorPos);
+
+        if (blockState.getBlock() instanceof AscanikIslandDoor
+                && blockState.getValue(AscanikIslandDoor.FACING) == Direction.SOUTH) {
+            pLevel.setBlock(doorPos, blockState.setValue(AscanikIslandDoor.DOOR, doorState), 3);
+        }
     }
 
     @Override
@@ -49,104 +96,38 @@ public class AscanikIslandLock extends Block {
 
         if (!pLevel.isClientSide()) {
             ItemStack heldItem = pPlayer.getItemInHand(pHand);
-            boolean isLockedCleyokantik = pState.getValue(LOCKED_CLEYOKANTIK);
-            boolean isLockedCleyolcanik = pState.getValue(LOCKED_CLEYOLCANIK);
-            boolean isLockedCleyokanstrale = pState.getValue(LOCKED_CLEYOKANSTRALE);
-            boolean isLockedCleyokourage = pState.getValue(LOCKED_CLEYOKOURAGE);
-            boolean isLockedCleyokonnaissance = pState.getValue(LOCKED_CLEYOKONNAISSANCE);
-            boolean isLockedCleyoforce = pState.getValue(LOCKED_CLEYOFORCE); // ✅ NOUVEAU
+            LockState currentLock = pState.getValue(LOCKED);
 
             // === RETIRER CLÉ AVEC MAIN VIDE ===
-            if ((isLockedCleyokantik || isLockedCleyolcanik || isLockedCleyokanstrale ||
-                    isLockedCleyokourage || isLockedCleyokonnaissance || isLockedCleyoforce) && heldItem.isEmpty()) {
-                if (isLockedCleyokantik) {
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3);
-                } else if (isLockedCleyolcanik) {
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOLCANIK.get()));
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOLCANIK, false), 3);
-                } else if (isLockedCleyokanstrale) {
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANSTRALE.get()));
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, false), 3);
-                } else if (isLockedCleyokourage) {
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);
-                } else if (isLockedCleyokonnaissance) {
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3);
-                } else if (isLockedCleyoforce) {                                       // ✅ NOUVEAU
-                    giveItem(pPlayer, new ItemStack(ModItems.CLEYOFORCE.get()));       // ✅ NOUVEAU
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, false), 3); // ✅ NOUVEAU
-                }
+            if (currentLock != LockState.EMPTY && heldItem.isEmpty()) {
+                giveItem(pPlayer, new ItemStack(LOCK_TO_ITEM.get(currentLock).get()));
+                pLevel.setBlock(pPos, pState.setValue(LOCKED, LockState.EMPTY), 3);
+                checkAndOpenDoor(pLevel, pPos, LockState.EMPTY); // ← AJOUTER
                 return InteractionResult.SUCCESS;
             }
 
             Item heldItemType = heldItem.getItem();
 
             // === DÉVERROUILLAGE (même clé) ===
-            if (isLockedCleyokantik && heldItemType == ModItems.CLEYOKANTIK.get()) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANTIK.get()));
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, false), 3);
-                return InteractionResult.SUCCESS;
-            }
-            if (isLockedCleyolcanik && heldItemType == ModItems.CLEYOLCANIK.get()) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOLCANIK.get()));
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOLCANIK, false), 3);
-                return InteractionResult.SUCCESS;
-            }
-            if (isLockedCleyokanstrale && heldItemType == ModItems.CLEYOKANSTRALE.get()) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKANSTRALE.get()));
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, false), 3);
-                return InteractionResult.SUCCESS;
-            }
-            if (isLockedCleyokourage && heldItemType == ModItems.CLEYOKOURAGE.get()) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKOURAGE.get()));
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, false), 3);
-                return InteractionResult.SUCCESS;
-            }
-            if (isLockedCleyokonnaissance && heldItemType == ModItems.CLEYOKONNAISSANCE.get()) {
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOKONNAISSANCE.get()));
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, false), 3);
-                return InteractionResult.SUCCESS;
-            }
-            if (isLockedCleyoforce && heldItemType == ModItems.CLEYOFORCE.get()) {      // ✅ NOUVEAU
-                giveItem(pPlayer, new ItemStack(ModItems.CLEYOFORCE.get()));            // ✅ NOUVEAU
-                pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, false), 3);    // ✅ NOUVEAU
+            if (currentLock != LockState.EMPTY
+                    && LOCK_TO_ITEM.containsKey(currentLock)
+                    && heldItemType == LOCK_TO_ITEM.get(currentLock).get()) {
+                giveItem(pPlayer, new ItemStack(heldItemType));
+                pLevel.setBlock(pPos, pState.setValue(LOCKED, LockState.EMPTY), 3);
+                checkAndOpenDoor(pLevel, pPos, LockState.EMPTY); // ← AJOUTER
                 return InteractionResult.SUCCESS;
             }
 
             // === VERROUILLAGE (bloc vide) ===
-            if (!isLockedCleyokantik && !isLockedCleyolcanik && !isLockedCleyokanstrale &&
-                    !isLockedCleyokourage && !isLockedCleyokonnaissance && !isLockedCleyoforce) {
-                if (heldItemType == ModItems.CLEYOKANTIK.get()) {
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANTIK, true), 3);
-                    return InteractionResult.CONSUME;
-                }
-                if (heldItemType == ModItems.CLEYOLCANIK.get()) {
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOLCANIK, true), 3);
-                    return InteractionResult.CONSUME;
-                }
-                if (heldItemType == ModItems.CLEYOKANSTRALE.get()) {
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKANSTRALE, true), 3);
-                    return InteractionResult.CONSUME;
-                }
-                if (heldItemType == ModItems.CLEYOKOURAGE.get()) {
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKOURAGE, true), 3);
-                    return InteractionResult.CONSUME;
-                }
-                if (heldItemType == ModItems.CLEYOKONNAISSANCE.get()) {
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOKONNAISSANCE, true), 3);
-                    return InteractionResult.CONSUME;
-                }
-                if (heldItemType == ModItems.CLEYOFORCE.get()) {                       // ✅ NOUVEAU
-                    heldItem.shrink(1); if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
-                    pLevel.setBlock(pPos, pState.setValue(LOCKED_CLEYOFORCE, true), 3); // ✅ NOUVEAU
-                    return InteractionResult.CONSUME;
+            if (currentLock == LockState.EMPTY) {
+                for (Map.Entry<LockState, java.util.function.Supplier<Item>> entry : LOCK_TO_ITEM.entrySet()) {
+                    if (heldItemType == entry.getValue().get()) {
+                        heldItem.shrink(1);
+                        if (heldItem.isEmpty()) pPlayer.setItemInHand(pHand, ItemStack.EMPTY);
+                        pLevel.setBlock(pPos, pState.setValue(LOCKED, entry.getKey()), 3);
+                        checkAndOpenDoor(pLevel, pPos, entry.getKey());
+                        return InteractionResult.CONSUME;
+                    }
                 }
             }
         }
@@ -161,8 +142,7 @@ public class AscanikIslandLock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(FACING, LOCKED_CLEYOKANTIK, LOCKED_CLEYOLCANIK, LOCKED_CLEYOKANSTRALE,
-                LOCKED_CLEYOKOURAGE, LOCKED_CLEYOKONNAISSANCE, LOCKED_CLEYOFORCE);  // ✅ NOUVEAU
+        pBuilder.add(FACING, LOCKED);
     }
 
     @Override

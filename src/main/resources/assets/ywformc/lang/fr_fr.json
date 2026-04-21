@@ -1,5 +1,6 @@
 {
   "creativetab.ywformc_tab": "Yo-kai Watch For Minecraft Mod",
+  "creativetab.medals_tab": "Médailles",
 
   "item.ywformc.yokai_watch": "Yo-kai Watch",
   "item.ywformc.yokai_watch_poche": "Yo-kai Watch de Poche",
@@ -60,6 +61,8 @@
   "item.ywformc.cleyokourage": "Cléyokourage",
   "item.ywformc.cleyokonnaissance": "Cléyokonnaissance",
   "item.ywformc.cleyoforce": "Cléyoforce",
+  "item.ywformc.cleyoterre": "Cléyoterre",
+  "item.ywformc.cleyovent": "Cléyovent",
 
   "item.ywformc.uptown_springdale_theme_disc": "Thème des Hauts de Granval",
   "item.ywformc.uptown_springdale_theme_disc.desc": "Yo-kai Watch - Les Hauts de Granval",
@@ -70,5 +73,11 @@
   "block.ywformc.bloc_de_magnetite": "Bloc de Magnétite",
   "block.ywformc.watchmakers_workbench": "Établi d'horlogerie",
   "block.ywformc.ascanik_island_lock": "Serrure de l'Île Ascanik",
-  "block.ywformc.ascanik_island_door": "Porte de l'Île Ascanik"
+  "block.ywformc.ascanik_island_door": "Porte de l'Île Ascanik",
+
+  "item.ywformc.medal_jibanyan": "Médaille de Jibanyan",
+
+  "screen.ywformc.watch_slot": "Yo-kai Watch",
+  "key.ywformc.open_watch": "Ouvrir l'emplacement pour Yo-kai Watch",
+  "key.categories.ywformc": "Yo-kai Watch For Minecraft Mod"
 }

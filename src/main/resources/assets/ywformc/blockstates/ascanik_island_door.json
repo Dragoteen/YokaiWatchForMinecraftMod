@@ -1,18 +1,53 @@
 {
   "variants": {
-    "facing=north,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door" },
-    "facing=south,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 180 },
-    "facing=east,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 90 },
-    "facing=west,door_1=false,door_2=false": { "model": "ywformc:block/ascanik_island_door","y": 270 },
+    "facing=north,door=locked": { "model": "ywformc:block/ascanik_island_door_locked" },
+    "facing=south,door=locked": { "model": "ywformc:block/ascanik_island_door_locked","y": 180 },
+    "facing=east,door=locked": { "model": "ywformc:block/ascanik_island_door_locked","y": 90 },
+    "facing=west,door=locked": { "model": "ywformc:block/ascanik_island_door_locked","y": 270 },
 
-    "facing=north,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1" },
-    "facing=south,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 180 },
-    "facing=east,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 90 },
-    "facing=west,door_1=true,door_2=false": { "model": "ywformc:block/ascanik_island_door_1","y": 270 },
+    "facing=north,door=mysterik_temple": { "model": "ywformc:block/ascanik_island_door_mysterik_temple" },
+    "facing=south,door=mysterik_temple": { "model": "ywformc:block/ascanik_island_door_mysterik_temple","y": 180 },
+    "facing=east,door=mysterik_temple": { "model": "ywformc:block/ascanik_island_door_mysterik_temple","y": 90 },
+    "facing=west,door=mysterik_temple": { "model": "ywformc:block/ascanik_island_door_mysterik_temple","y": 270 },
 
-    "facing=north,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2" },
-    "facing=south,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 180 },
-    "facing=east,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 90 },
-    "facing=west,door_1=false,door_2=true": { "model": "ywformc:block/ascanik_island_door_2","y": 270 }
+    "facing=north,door=mount_ardent": { "model": "ywformc:block/ascanik_island_door_mount_ardent" },
+    "facing=south,door=mount_ardent": { "model": "ywformc:block/ascanik_island_door_mount_ardent","y": 180 },
+    "facing=east,door=mount_ardent": { "model": "ywformc:block/ascanik_island_door_mount_ardent","y": 90 },
+    "facing=west,door=mount_ardent": { "model": "ywformc:block/ascanik_island_door_mount_ardent","y": 270 },
+
+    "facing=north,door=ancient_wreck": { "model": "ywformc:block/ascanik_island_door_ancient_wreck" },
+    "facing=south,door=ancient_wreck": { "model": "ywformc:block/ascanik_island_door_ancient_wreck","y": 180 },
+    "facing=east,door=ancient_wreck": { "model": "ywformc:block/ascanik_island_door_ancient_wreck","y": 90 },
+    "facing=west,door=ancient_wreck": { "model": "ywformc:block/ascanik_island_door_ancient_wreck","y": 270 },
+
+    "facing=north,door=courage_statue": { "model": "ywformc:block/ascanik_island_door_courage_statue" },
+    "facing=south,door=courage_statue": { "model": "ywformc:block/ascanik_island_door_courage_statue","y": 180 },
+    "facing=east,door=courage_statue": { "model": "ywformc:block/ascanik_island_door_courage_statue","y": 90 },
+    "facing=west,door=courage_statue": { "model": "ywformc:block/ascanik_island_door_courage_statue","y": 270 },
+
+    "facing=north,door=knowledge_statue": { "model": "ywformc:block/ascanik_island_door_knowledge_statue" },
+    "facing=south,door=knowledge_statue": { "model": "ywformc:block/ascanik_island_door_knowledge_statue","y": 180 },
+    "facing=east,door=knowledge_statue": { "model": "ywformc:block/ascanik_island_door_knowledge_statue","y": 90 },
+    "facing=west,door=knowledge_statue": { "model": "ywformc:block/ascanik_island_door_knowledge_statue","y": 270 },
+
+    "facing=north,door=strength_statue": { "model": "ywformc:block/ascanik_island_door_strength_statue" },
+    "facing=south,door=strength_statue": { "model": "ywformc:block/ascanik_island_door_strength_statue","y": 180 },
+    "facing=east,door=strength_statue": { "model": "ywformc:block/ascanik_island_door_strength_statue","y": 90 },
+    "facing=west,door=strength_statue": { "model": "ywformc:block/ascanik_island_door_strength_statue","y": 270 },
+
+    "facing=north,door=terrestrial_part": { "model": "ywformc:block/ascanik_island_door_terrestrial_part" },
+    "facing=south,door=terrestrial_part": { "model": "ywformc:block/ascanik_island_door_terrestrial_part","y": 180 },
+    "facing=east,door=terrestrial_part": { "model": "ywformc:block/ascanik_island_door_terrestrial_part","y": 90 },
+    "facing=west,door=terrestrial_part": { "model": "ywformc:block/ascanik_island_door_terrestrial_part","y": 270 },
+
+    "facing=north,door=windy_part": { "model": "ywformc:block/ascanik_island_door_windy_part" },
+    "facing=south,door=windy_part": { "model": "ywformc:block/ascanik_island_door_windy_part","y": 180 },
+    "facing=east,door=windy_part": { "model": "ywformc:block/ascanik_island_door_windy_part","y": 90 },
+    "facing=west,door=windy_part": { "model": "ywformc:block/ascanik_island_door_windy_part","y": 270 },
+
+    "facing=north,door=oceanic_part": { "model": "ywformc:block/ascanik_island_door_oceanic_part" },
+    "facing=south,door=oceanic_part": { "model": "ywformc:block/ascanik_island_door_oceanic_part","y": 180 },
+    "facing=east,door=oceanic_part": { "model": "ywformc:block/ascanik_island_door_oceanic_part","y": 90 },
+    "facing=west,door=oceanic_part": { "model": "ywformc:block/ascanik_island_door_oceanic_part","y": 270 }
   }
 }

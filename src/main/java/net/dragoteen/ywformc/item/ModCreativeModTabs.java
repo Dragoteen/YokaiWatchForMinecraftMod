@@ -78,6 +78,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.CLEYOKOURAGE.get());
                         output.accept(ModItems.CLEYOKONNAISSANCE.get());
                         output.accept(ModItems.CLEYOFORCE.get());
+                        output.accept(ModItems.CLEYOTERRE.get());
+                        output.accept(ModItems.CLEYOVENT.get());
 
                         output.accept(ModItems.UPTOWN_SPRINGDALE_THEME_DISC.get());
                         output.accept(ModItems.MOUNT_WILDWOOD_THEME_DISC.get());
@@ -97,6 +99,15 @@ public class ModCreativeModTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> MEDALS_TAB = CREATIVE_MODE_TABS.register("medals_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.YOKAI_WATCH_ZERO.get()))
+                    .title(Component.translatable("creativetab.medals_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModItems.YOKAI_WATCH.get());
+
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
