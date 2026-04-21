@@ -7,6 +7,7 @@ import net.dragoteen.ywformc.entity.client.JibanyanRenderer;
 import net.dragoteen.ywformc.item.ModCreativeModTabs;
 import net.dragoteen.ywformc.item.ModItems;
 import net.dragoteen.ywformc.sound.ModSounds;
+import net.dragoteen.ywformc.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -76,6 +77,8 @@ public class YoKaiWatchForMinecraftMod
         ModSounds.register(modEventBus);
 
         ModEntities.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

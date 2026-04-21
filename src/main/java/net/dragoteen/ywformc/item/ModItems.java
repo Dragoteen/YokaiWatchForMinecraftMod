@@ -53,7 +53,7 @@ public class ModItems {
     public static final RegistryObject<Item> YOKAI_WATCH_ANIMUS = ITEMS.register("yokai_watch_animus",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> YOKAI_PAD= ITEMS.register("yokai_pad",
+    public static final RegistryObject<Item> YOKAI_PAD = ITEMS.register("yokai_pad",
             () -> new YokaiPad(new Item.Properties()));
 
     public static final RegistryObject<Item> BLASTER_YOKAI = ITEMS.register("blaster_yokai",

@@ -79,5 +79,8 @@
 
   "screen.ywformc.watch_slot": "Yo-kai Watch",
   "key.ywformc.open_watch": "Ouvrir l'emplacement pour Yo-kai Watch",
-  "key.categories.ywformc": "Yo-kai Watch For Minecraft Mod"
+  "key.categories.ywformc": "Yo-kai Watch For Minecraft Mod",
+
+  "entity.minecraft.villager.ywformc.watchmaker": "Horloger",
+  "entity.ywformc.jibanyan": "Jibanyan"
 }
