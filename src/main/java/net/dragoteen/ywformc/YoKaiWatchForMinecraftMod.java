@@ -6,8 +6,12 @@ import net.dragoteen.ywformc.entity.ModEntities;
 import net.dragoteen.ywformc.entity.client.JibanyanRenderer;
 import net.dragoteen.ywformc.item.ModCreativeModTabs;
 import net.dragoteen.ywformc.item.ModItems;
+import net.dragoteen.ywformc.network.ModPackets;
+import net.dragoteen.ywformc.screen.MedalliumScreen;
+import net.dragoteen.ywformc.screen.ModMenuTypes;
 import net.dragoteen.ywformc.sound.ModSounds;
 import net.dragoteen.ywformc.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -80,6 +84,9 @@ public class YoKaiWatchForMinecraftMod
 
         ModVillagers.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+        ModPackets.register();
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -95,6 +102,8 @@ public class YoKaiWatchForMinecraftMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.JIBANYAN.get(), JibanyanRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.MEDALLIUM_MENU.get(), MedalliumScreen::new);
         }
     }
 

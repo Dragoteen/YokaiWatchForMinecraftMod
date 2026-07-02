@@ -100,11 +100,25 @@ public class ModCreativeModTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> MEDALS_TAB = CREATIVE_MODE_TABS.register("medals_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.YOKAI_WATCH_ZERO.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MEDAL_JIBANYAN.get()))
                     .title(Component.translatable("creativetab.medals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.YOKAI_WATCH.get());
+                        output.accept(ModItems.MEDAL_JIBANYAN.get());
+
+
+                        output.accept(ModItems.MEDAL_TREASURE_MEOPATRA.get());
+                        output.accept(ModItems.MEDAL_TREASURE_FITWIT.get());
+                        output.accept(ModItems.MEDAL_TREASURE_EL_DORAGO.get());
+                        output.accept(ModItems.MEDAL_TREASURE_THE_HINIX.get());
+                        output.accept(ModItems.MEDAL_TREASURE_YODELSEN.get());
+                        output.accept(ModItems.MEDAL_TREASURE_NARCIS_II.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ZAPPADOKIA.get());
+                        output.accept(ModItems.MEDAL_TREASURE_MADEMOAISELLE.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ROSETTA_STONE.get());
+                        output.accept(ModItems.MEDAL_TREASURE_DOESCALIBUR.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ENCORE_DEAD.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ARMORTERASU.get());
 
                     })
                     .build());

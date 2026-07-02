@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": { "item": "ywformc:yokai_watch" },
+    "title": { "translate": "advancement.ywformc.root.title" },
+    "description": { "translate": "advancement.ywformc.root.description" },
+    "background": "ywformc:textures/block/bloc_de_magnetite.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "condtions": {
+        "items": [
+          {
+            "items": [
+              "ywformc:yokai_watch"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

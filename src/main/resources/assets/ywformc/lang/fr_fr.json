@@ -50,10 +50,11 @@
   "item.ywformc.extreme_lapis": "Lapis Extrême",
   "item.ywformc.extreme_gold": "Or Extrême",
 
-  "item.ywformc.medallium": "Médallium",
   "item.ywformc.yovnikai_watch": "Yovni-kai Watch",
   "item.ywformc.cle_yokai_world": "Clé du Yo-kai World",
   "item.ywformc.telemir_poche": "Télémir de Poche",
+
+  "item.ywformc.medallium": "Médallium",
 
   "item.ywformc.cleyokantik": "Cléyokantik",
   "item.ywformc.cleyolcanik": "Cléyolcanik",
@@ -75,12 +76,53 @@
   "block.ywformc.ascanik_island_lock": "Serrure de l'Île Ascanik",
   "block.ywformc.ascanik_island_door": "Porte de l'Île Ascanik",
 
-  "item.ywformc.medal_jibanyan": "Médaille de Jibanyan",
-
   "screen.ywformc.watch_slot": "Yo-kai Watch",
   "key.ywformc.open_watch": "Ouvrir l'emplacement pour Yo-kai Watch",
   "key.categories.ywformc": "Yo-kai Watch For Minecraft Mod",
 
+  "gui.ywformc.medaillum": "Médaillum",
+  "gui.ywformc.reveal": "Révéler",
+
+  "advancement.ywformc.root.title": "Yo-kai Watch",
+  "advancement.ywformc.root.description": "Sans qu'on le sache, les Yo-kais sont ici !",
+  "advancement.ywformc.yokai_pad.title": "Classification avancée",
+  "advancement.ywformc.yokai_pad.description": "Vous pouvez enfin organiser vos médaillons !",
+
+
+
   "entity.minecraft.villager.ywformc.watchmaker": "Horloger",
-  "entity.ywformc.jibanyan": "Jibanyan"
+
+  "entity.ywformc.jibanyan": "Jibanyan",
+
+
+
+  "item.ywformc.medal_jibanyan": "Médaille de Jibanyan",
+
+  "item.ywformc.medal_treasure_shogunyan": "Médaille Trésor de Shogunyan",
+  "item.ywformc.medal_treasure_komashura": "Médaille Trésor de Komashura",
+  "item.ywformc.medal_treasure_dandoodle": "Médaille Trésor de Cabotin",
+  "item.ywformc.medal_treasure_elder_bloom": "Médaille Trésor de Camaïeul",
+  "item.ywformc.medal_treasure_gilgaros": "Médaille Trésor de Gorgouille",
+  "item.ywformc.medal_treasure_spoilerina": "Médaille Trésor de Déballerine",
+  "item.ywformc.medal_treasure_poofessor": "Médaille Trésor de Savantard",
+  "item.ywformc.medal_treasure_slurpent": "Médaille Trésor de Slurpent",
+  "item.ywformc.medal_treasure_re-q-perate": "Médaille Trésor de Saincope",
+  "item.ywformc.medal_treasure_princess_pearl": "Médaille Trésor de Corailline",
+  "item.ywformc.medal_treasure_asura": "Médaille Trésor d'Asura",
+  "item.ywformc.medal_treasure_whyvern_king": "Médaille Trésor de Roi Pourkoidon",
+  "item.ywformc.medal_treasure_morigami_rex": "Médaille Trésor de [Morigami Rex]",
+  "item.ywformc.medal_treasure_kanehui_huime": "Médaille Trésor de [Kanehui Huime]",
+
+  "item.ywformc.medal_treasure_meopatra": "Médaille Trésor de Néfertyrannie",
+  "item.ywformc.medal_treasure_fitwit": "Médaille Trésor de Cocassepied",
+  "item.ywformc.medal_treasure_el_dorago": "Médaille Trésor d'El Dragonor",
+  "item.ywformc.medal_treasure_the_hinix": "Médaille Trésor de Phémniscian",
+  "item.ywformc.medal_treasure_yodelsen": "Médaille Trésor de Yodéibu",
+  "item.ywformc.medal_treasure_narcis_ii": "Médaille Trésor de Narcès II",
+  "item.ywformc.medal_treasure_zappadokia": "Médaille Trésor de Zappadokia",
+  "item.ywformc.medal_treasure_mademoaiselle": "Médaille Trésor de Mademoaïselle",
+  "item.ywformc.medal_treasure_rosetta_stone": "Médaille Trésor de Pierre de Rosette",
+  "item.ywformc.medal_treasure_doescalibur": "Médaille Trésor d'Exsadibur",
+  "item.ywformc.medal_treasure_encore_dead": "Médaille Trésor d'Encore Dead",
+  "item.ywformc.medal_treasure_armorterasu": "Médaille Trésor de [Armorterasu]"
 }
