@@ -107,20 +107,44 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MEDAL_JIBANYAN.get());
 
 
+                        output.accept(ModItems.MEDAL_SHOGUNYAN.get());
                         output.accept(ModItems.MEDAL_TREASURE_SHOGUNYAN.get());
+
+                        output.accept(ModItems.MEDAL_KOMASHURA.get());
                         output.accept(ModItems.MEDAL_TREASURE_KOMASHURA.get());
+
+                        output.accept(ModItems.MEDAL_DANDOODLE.get());
                         output.accept(ModItems.MEDAL_TREASURE_DANDOODLE.get());
+
+                        output.accept(ModItems.MEDAL_ELDER_BLOOM.get());
                         output.accept(ModItems.MEDAL_TREASURE_ELDER_BLOOM.get());
+
+                        output.accept(ModItems.MEDAL_GILGAROS.get());
                         output.accept(ModItems.MEDAL_TREASURE_GILGAROS.get());
+
+                        output.accept(ModItems.MEDAL_SPOILERINA.get());
                         output.accept(ModItems.MEDAL_TREASURE_SPOILERINA.get());
+
+                        output.accept(ModItems.MEDAL_POOFESSOR.get());
                         output.accept(ModItems.MEDAL_TREASURE_POOFESSOR.get());
-                        output.accept(ModItems.MEDAL_TREASURE_SLURPENT.get());
+
+                        output.accept(ModItems.MEDAL_SLURPENT.get());
+
+                        output.accept(ModItems.MEDAL_U_RE_Q_PERATE.get());
                         output.accept(ModItems.MEDAL_TREASURE_RE_Q_PERATE.get());
+
+                        output.accept(ModItems.MEDAL_U_PRINCESS_PEARL.get());
                         output.accept(ModItems.MEDAL_TREASURE_PRINCESS_PEARL.get());
+
+                        output.accept(ModItems.MEDAL_U_ASURA.get());
                         output.accept(ModItems.MEDAL_TREASURE_ASURA.get());
+
+                        output.accept(ModItems.MEDAL_U_WHYVERN_KING.get());
                         output.accept(ModItems.MEDAL_TREASURE_WHYVERN_KING.get());
+
                         output.accept(ModItems.MEDAL_TREASURE_MORIGAMI_REX.get());
-                        output.accept(ModItems.MEDAL_TREASURE_KANEKUI_HUIME.get());
+
+                        output.accept(ModItems.MEDAL_TREASURE_KANEKUI_HIME.get());
 
 
                         output.accept(ModItems.MEDAL_TREASURE_MEOPATRA.get());

@@ -243,64 +243,61 @@ public class ModItems {
         return ITEMS.register(name, () -> new Medal(type, new Item.Properties()));
     }
 
-    public static final RegistryObject<Item> MEDAL_JIBANYAN =
-            registerMedal("medal_jibanyan", Medal.MedalType.NORMAL);
+    public static final RegistryObject<Item> MEDAL_JIBANYAN = registerMedal("medal_jibanyan", Medal.MedalType.NORMAL);
 
 
-    public static final RegistryObject<Item> MEDAL_TREASURE_SHOGUNYAN =
-            registerMedal("medal_treasure_shogunyan", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_KOMASHURA =
-            registerMedal("medal_treasure_komashura", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_DANDOODLE =
-            registerMedal("medal_treasure_dandoodle", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ELDER_BLOOM =
-            registerMedal("medal_treasure_elder_bloom", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_GILGAROS =
-            registerMedal("medal_treasure_gilgaros", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_SPOILERINA =
-            registerMedal("medal_treasure_spoilerina", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_POOFESSOR =
-            registerMedal("medal_treasure_poofessor", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_SLURPENT =
-            registerMedal("medal_treasure_slurpent", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_RE_Q_PERATE =
-            registerMedal("medal_treasure_re-q-perate", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_PRINCESS_PEARL =
-            registerMedal("medal_treasure_princess_pearl", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ASURA =
-            registerMedal("medal_treasure_asura", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_WHYVERN_KING =
-            registerMedal("medal_treasure_whyvern_king", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_MORIGAMI_REX =
-            registerMedal("medal_treasure_morigami_rex", Medal.MedalType.LEGENDARY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_KANEKUI_HUIME =
-            registerMedal("medal_treasure_kanehui_huime", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_SHOGUNYAN = registerMedal("medal_shogunyan", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_SHOGUNYAN = registerMedal("medal_treasure_shogunyan", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_KOMASHURA = registerMedal("medal_komashura", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_KOMASHURA = registerMedal("medal_treasure_komashura", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_DANDOODLE = registerMedal("medal_dandoodle", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_DANDOODLE = registerMedal("medal_treasure_dandoodle", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_ELDER_BLOOM = registerMedal("medal_elder_bloom", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ELDER_BLOOM = registerMedal("medal_treasure_elder_bloom", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_GILGAROS = registerMedal("medal_gilgaros", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_GILGAROS = registerMedal("medal_treasure_gilgaros", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_SPOILERINA = registerMedal("medal_spoilerina", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_SPOILERINA = registerMedal("medal_treasure_spoilerina", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_POOFESSOR = registerMedal("medal_poofessor", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_POOFESSOR = registerMedal("medal_treasure_poofessor", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_SLURPENT = registerMedal("medal_slurpent", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_U_RE_Q_PERATE = registerMedal("medal_u_re-q-perate", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_RE_Q_PERATE = registerMedal("medal_treasure_re-q-perate", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_U_PRINCESS_PEARL = registerMedal("medal_u_princess_pearl", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_PRINCESS_PEARL = registerMedal("medal_treasure_princess_pearl", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_U_ASURA = registerMedal("medal_u_asura", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ASURA = registerMedal("medal_treasure_asura", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_U_WHYVERN_KING = registerMedal("medal_u_whyvern_king", Medal.MedalType.LEGENDARY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_WHYVERN_KING = registerMedal("medal_treasure_whyvern_king", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_TREASURE_MORIGAMI_REX = registerMedal("medal_treasure_morigami_rex", Medal.MedalType.LEGENDARY);
+
+    public static final RegistryObject<Item> MEDAL_TREASURE_KANEKUI_HIME = registerMedal("medal_treasure_kanekui_hime", Medal.MedalType.LEGENDARY);
 
 
-    public static final RegistryObject<Item> MEDAL_TREASURE_MEOPATRA =
-            registerMedal("medal_treasure_meopatra", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_FITWIT =
-            registerMedal("medal_treasure_fitwit", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_EL_DORAGO =
-            registerMedal("medal_treasure_el_dorago", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_THE_HINIX =
-            registerMedal("medal_treasure_the_hinix", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_YODELSEN =
-            registerMedal("medal_treasure_yodelsen", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_NARCIS_II =
-            registerMedal("medal_treasure_narcis_ii", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ZAPPADOKIA =
-            registerMedal("medal_treasure_zappadokia", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_MADEMOAISELLE =
-            registerMedal("medal_treasure_mademoaiselle", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ROSETTA_STONE =
-            registerMedal("medal_treasure_rosetta_stone", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_DOESCALIBUR =
-            registerMedal("medal_treasure_doescalibur", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ENCORE_DEAD =
-            registerMedal("medal_treasure_encore_dead", Medal.MedalType.TREASURE_DIVINITY);
-    public static final RegistryObject<Item> MEDAL_TREASURE_ARMORTERASU =
-            registerMedal("medal_treasure_armorterasu", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_MEOPATRA = registerMedal("medal_treasure_meopatra", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_FITWIT = registerMedal("medal_treasure_fitwit", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_EL_DORAGO = registerMedal("medal_treasure_el_dorago", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_THE_HINIX = registerMedal("medal_treasure_the_hinix", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_YODELSEN = registerMedal("medal_treasure_yodelsen", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_NARCIS_II = registerMedal("medal_treasure_narcis_ii", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ZAPPADOKIA = registerMedal("medal_treasure_zappadokia", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_MADEMOAISELLE = registerMedal("medal_treasure_mademoaiselle", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ROSETTA_STONE = registerMedal("medal_treasure_rosetta_stone", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_DOESCALIBUR = registerMedal("medal_treasure_doescalibur", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ENCORE_DEAD = registerMedal("medal_treasure_encore_dead", Medal.MedalType.TREASURE_DIVINITY);
+    public static final RegistryObject<Item> MEDAL_TREASURE_ARMORTERASU = registerMedal("medal_treasure_armorterasu", Medal.MedalType.TREASURE_DIVINITY);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
