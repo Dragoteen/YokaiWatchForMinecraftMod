@@ -107,6 +107,10 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MEDAL_JIBANYAN.get());
 
 
+                        output.accept(ModItems.MEDAL_U_WHISPER.get());
+                        output.accept(ModItems.MEDAL_U_WHISPOCRATES.get());
+
+
                         output.accept(ModItems.MEDAL_SHOGUNYAN.get());
                         output.accept(ModItems.MEDAL_TREASURE_SHOGUNYAN.get());
 

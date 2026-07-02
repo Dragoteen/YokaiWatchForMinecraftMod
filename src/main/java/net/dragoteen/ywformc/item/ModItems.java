@@ -245,6 +245,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MEDAL_JIBANYAN = registerMedal("medal_jibanyan", Medal.MedalType.NORMAL);
 
+    public static final RegistryObject<Item> MEDAL_U_WHISPER = registerMedal("medal_u_whisper", Medal.MedalType.U);
+    public static final RegistryObject<Item> MEDAL_U_WHISPOCRATES = registerMedal("medal_u_whispocrates", Medal.MedalType.U);
+
 
     public static final RegistryObject<Item> MEDAL_SHOGUNYAN = registerMedal("medal_shogunyan", Medal.MedalType.LEGENDARY);
     public static final RegistryObject<Item> MEDAL_TREASURE_SHOGUNYAN = registerMedal("medal_treasure_shogunyan", Medal.MedalType.LEGENDARY);
