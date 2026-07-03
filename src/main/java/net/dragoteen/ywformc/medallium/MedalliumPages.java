@@ -104,4 +104,31 @@ public class MedalliumPages {
                     ModItems.MEDAL_U_PUPPYNYAN.get()
             },
             ModItems.MEDAL_KOMASHURA.get());
+
+    // --- Médallium Blasters 2 ---
+    public static final MedalliumPageDefinition BLASTERS2_SHOGUNYAN = register(MedalliumSet.BLASTERS2, "shogunyan",
+            new Item[] {
+                    ModItems.MEDAL_EMENYAN.get(),
+                    ModItems.MEDAL_ROBONYAN.get(),
+                    ModItems.MEDAL_Z_HOVERNYAN.get(),
+                    ModItems.MEDAL_TREASURE_TORANKA.get(),
+                    ModItems.MEDAL_BLAZION.get(),
+                    ModItems.MEDAL_Z_DRACUNYAN.get(),
+                    ModItems.MEDAL_TREASURE_NYANSES_II.get(),
+                    ModItems.MEDAL_JIBANYAN.get()
+            },
+            ModItems.MEDAL_SHOGUNYAN.get());
+
+    public static final MedalliumPageDefinition BLASTERS2_KOMASHURA = register(MedalliumSet.BLASTERS2, "komashura",
+            new Item[] {
+                    ModItems.MEDAL_SIR_BERUS.get(),
+                    ModItems.MEDAL_SWELTERRIER.get(),
+                    ModItems.MEDAL_MERICAN_LAZY_SUNDAE.get(),
+                    ModItems.MEDAL_TREASURE_TANTO.get(),
+                    ModItems.MEDAL_KOMASAN.get(),
+                    ModItems.MEDAL_KOMANE.get(),
+                    ModItems.MEDAL_ROBONYAN.get(),
+                    ModItems.MEDAL_KOMIGER.get()
+            },
+            ModItems.MEDAL_KOMASHURA.get());
 }

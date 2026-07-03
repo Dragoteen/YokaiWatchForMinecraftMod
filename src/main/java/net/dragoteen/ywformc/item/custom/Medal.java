@@ -16,6 +16,8 @@ public class Medal extends Item implements WatchItem {
         BLASTER(Rarity.COMMON),
         DREAM(Rarity.UNCOMMON),
         TREASURE(Rarity.UNCOMMON),
+        TREASURE_SILVER(Rarity.RARE),
+        TREASURE_GOLD(Rarity.RARE),
 
         LEGENDARY(Rarity.EPIC),
         LEGENDARY_MYSTERY(Rarity.EPIC),

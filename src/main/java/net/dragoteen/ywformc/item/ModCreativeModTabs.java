@@ -135,6 +135,10 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MEDAL_SWELTERRIER.get());
                         output.accept(ModItems.MEDAL_SIR_BERUS.get());
                         output.accept(ModItems.MEDAL_PINKIPOO.get());
+                        output.accept(ModItems.MEDAL_EMENYAN.get());
+                        output.accept(ModItems.MEDAL_ROBONYAN.get());
+                        output.accept(ModItems.MEDAL_KOMASAN.get());
+                        output.accept(ModItems.MEDAL_KOMIGER.get());
 
                         output.accept(ModItems.MEDAL_SHOGUNYAN.get());
                         output.accept(ModItems.MEDAL_KOMASHURA.get());
@@ -151,6 +155,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MEDAL_Z_HOVERNYAN.get());
                         output.accept(ModItems.MEDAL_Z_MIRADOX.get());
                         output.accept(ModItems.MEDAL_Z_LIE_IN_HEART.get());
+                        output.accept(ModItems.MEDAL_Z_DRACUNYAN.get());
+                        output.accept(ModItems.MEDAL_Z_ROBOKOMA.get());
 
 
                         output.accept(ModItems.MEDAL_CLASSIC_TUBLAPPA.get());
@@ -172,6 +178,7 @@ public class ModCreativeModTabs {
 
 
                         output.accept(ModItems.MEDAL_MERICAN_PUPPICCINO.get());
+                        output.accept(ModItems.MEDAL_MERICAN_LAZY_SUNDAE.get());
 
 
                         output.accept(ModItems.MEDAL_DREAM_MOCHISMO.get());
@@ -188,7 +195,20 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MEDAL_DREAM_BLAZION.get());
                         output.accept(ModItems.MEDAL_DREAM_FRAZZEL.get());
                         output.accept(ModItems.MEDAL_DREAM_SWELTERRIER.get());
+                        output.accept(ModItems.MEDAL_DREAM_EMENYAN.get());
+                        output.accept(ModItems.MEDAL_DREAM_DRACUNYAN.get());
+                        output.accept(ModItems.MEDAL_DREAM_LAZY_SUNDAE.get());
+                        output.accept(ModItems.MEDAL_DREAM_KOMASAN.get());
+                        output.accept(ModItems.MEDAL_DREAM_KOMASAN_LIVE.get());
 
+
+                        output.accept(ModItems.MEDAL_TREASURE_TANTO.get());
+                        output.accept(ModItems.MEDAL_TREASURE_NYANSES_II.get());
+                        output.accept(ModItems.MEDAL_TREASURE_TANTO.get());
+
+                        output.accept(ModItems.MEDAL_TREASURE_SILVER_NYANSES_II.get());
+
+                        output.accept(ModItems.MEDAL_TREASURE_NYANSES_II_G.get());
 
                         output.accept(ModItems.MEDAL_TREASURE_SHOGUNYAN.get());
                         output.accept(ModItems.MEDAL_TREASURE_KOMASHURA.get());

@@ -8,7 +8,7 @@ public enum MedalliumSet {
     Z(List.of("shogunyan", "komashura", "cabotin", "camaieul", "gorgouille", "deballerine", "savantard", "slurpent")),
     BLASTERS(List.of("shogunyan", "komashura", "cabotin", "camaieul", "gorgouille", "deballerine", "savantard", "slurpent")),
     U(List.of("shogunyan", "komashura", "cabotin", "camaieul", "gorgouille", "deballerine", "savantard", "slurpent", "saincope", "coraillinr", "asura", "roi_pourkoidon")),
-    BLASTERS_2(List.of("shogunyan", "komashura", "cabotin", "camaieul", "gorgouille", "deballerine", "savantard", "slurpent", "saincope", "coraillinr", "asura", "roi_pourkoidon", "morigami_rex", "kanekui_hime"));
+    BLASTERS2(List.of("shogunyan", "komashura", "cabotin", "camaieul", "gorgouille", "deballerine", "savantard", "slurpent", "saincope", "coraillinr", "asura", "roi_pourkoidon", "morigami_rex", "kanekui_hime"));
 
     private final List<String> pageIds;
 

@@ -247,7 +247,7 @@ public class ModItems {
             () -> new Medallium(MedalliumSet.U, new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> MEDALLIUM_BLASTERS_2 = ITEMS.register("medallium_blasters_2",
-            () -> new Medallium(MedalliumSet.BLASTERS, new Item.Properties().rarity(Rarity.UNCOMMON)));
+            () -> new Medallium(MedalliumSet.BLASTERS2, new Item.Properties().rarity(Rarity.UNCOMMON)));
 
 
 
@@ -273,7 +273,6 @@ public class ModItems {
     public static final RegistryObject<Item> MEDAL_QUAKEN = registerMedal("medal_quaken", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_KOMAJIRO = registerMedal("medal_komajiro", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_BLAZION = registerMedal("medal_blazion", Medal.MedalType.NORMAL);
-
     public static final RegistryObject<Item> MEDAL_KOMANE = registerMedal("medal_komane", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_KYUBI = registerMedal("medal_kyubi", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_MAD_MOUNTAIN= registerMedal("medal_mad_mountain", Medal.MedalType.NORMAL);
@@ -282,6 +281,10 @@ public class ModItems {
     public static final RegistryObject<Item> MEDAL_SWELTERRIER = registerMedal("medal_swelterrier", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_SIR_BERUS = registerMedal("medal_sir_berus", Medal.MedalType.NORMAL);
     public static final RegistryObject<Item> MEDAL_PINKIPOO = registerMedal("medal_pinkipoo", Medal.MedalType.NORMAL);
+    public static final RegistryObject<Item> MEDAL_EMENYAN = registerMedal("medal_emenyan", Medal.MedalType.NORMAL);
+    public static final RegistryObject<Item> MEDAL_ROBONYAN = registerMedal("medal_robonyan", Medal.MedalType.NORMAL);
+    public static final RegistryObject<Item> MEDAL_KOMASAN = registerMedal("medal_komasan", Medal.MedalType.NORMAL);
+    public static final RegistryObject<Item> MEDAL_KOMIGER = registerMedal("medal_komiger", Medal.MedalType.NORMAL);
 
     public static final RegistryObject<Item> MEDAL_SHOGUNYAN = registerMedal("medal_shogunyan", Medal.MedalType.LEGENDARY);
     public static final RegistryObject<Item> MEDAL_KOMASHURA = registerMedal("medal_komashura", Medal.MedalType.LEGENDARY);
@@ -304,6 +307,8 @@ public class ModItems {
     public static final RegistryObject<Item> MEDAL_Z_HOVERNYAN = registerMedal("medal_z_hovernyan", Medal.MedalType.Z);
     public static final RegistryObject<Item> MEDAL_Z_MIRADOX = registerMedal("medal_z_miradox", Medal.MedalType.Z);
     public static final RegistryObject<Item> MEDAL_Z_LIE_IN_HEART = registerMedal("medal_z_lie-in_heart", Medal.MedalType.Z);
+    public static final RegistryObject<Item> MEDAL_Z_DRACUNYAN = registerMedal("medal_z_dracunyan", Medal.MedalType.Z);
+    public static final RegistryObject<Item> MEDAL_Z_ROBOKOMA = registerMedal("medal_z_robokoma", Medal.MedalType.Z);
 
 
     public static final RegistryObject<Item> MEDAL_CLASSIC_TUBLAPPA = registerMedal("medal_classic_tublappa", Medal.MedalType.CLASSIC);
@@ -321,6 +326,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> MEDAL_MERICAN_PUPPICCINO = registerMedal("medal_merican_puppiccino", Medal.MedalType.MERICAN);
+    public static final RegistryObject<Item> MEDAL_MERICAN_LAZY_SUNDAE = registerMedal("medal_merican_lazy_sundae", Medal.MedalType.MERICAN);
 
 
     public static final RegistryObject<Item> MEDAL_DREAM_BLAZION = registerMedal("medal_dream_blazion", Medal.MedalType.DREAM);
@@ -336,7 +342,20 @@ public class ModItems {
     public static final RegistryObject<Item> MEDAL_DREAM_KYUBI = registerMedal("medal_dream_kyubi", Medal.MedalType.DREAM);
     public static final RegistryObject<Item> MEDAL_DREAM_FRAZZEL= registerMedal("medal_dream_frazzel", Medal.MedalType.DREAM);
     public static final RegistryObject<Item> MEDAL_DREAM_SWELTERRIER = registerMedal("medal_dream_swelterrier", Medal.MedalType.DREAM);
+    public static final RegistryObject<Item> MEDAL_DREAM_EMENYAN = registerMedal("medal_dream_emenyan", Medal.MedalType.DREAM);
+    public static final RegistryObject<Item> MEDAL_DREAM_DRACUNYAN = registerMedal("medal_dream_dracunyan", Medal.MedalType.DREAM);
+    public static final RegistryObject<Item> MEDAL_DREAM_LAZY_SUNDAE = registerMedal("medal_dream_lazy_sundae", Medal.MedalType.DREAM);
+    public static final RegistryObject<Item> MEDAL_DREAM_KOMASAN = registerMedal("medal_dream_komasan", Medal.MedalType.DREAM);
+    public static final RegistryObject<Item> MEDAL_DREAM_KOMASAN_LIVE = registerMedal("medal_dream_komasan_live", Medal.MedalType.DREAM);
 
+
+    public static final RegistryObject<Item> MEDAL_TREASURE_TORANKA = registerMedal("medal_treasure_toranka", Medal.MedalType.TREASURE);
+    public static final RegistryObject<Item> MEDAL_TREASURE_NYANSES_II = registerMedal("medal_treasure_nyanses_ii", Medal.MedalType.TREASURE);
+    public static final RegistryObject<Item> MEDAL_TREASURE_TANTO = registerMedal("medal_treasure_tanto", Medal.MedalType.TREASURE);
+
+    public static final RegistryObject<Item> MEDAL_TREASURE_SILVER_NYANSES_II = registerMedal("medal_treasure_silver_nyanses_ii", Medal.MedalType.TREASURE_SILVER);
+
+    public static final RegistryObject<Item> MEDAL_TREASURE_NYANSES_II_G = registerMedal("medal_treasure_nyanses_ii_g", Medal.MedalType.TREASURE_GOLD);
 
     public static final RegistryObject<Item> MEDAL_TREASURE_SHOGUNYAN = registerMedal("medal_treasure_shogunyan", Medal.MedalType.LEGENDARY);
     public static final RegistryObject<Item> MEDAL_TREASURE_KOMASHURA = registerMedal("medal_treasure_komashura", Medal.MedalType.LEGENDARY);
