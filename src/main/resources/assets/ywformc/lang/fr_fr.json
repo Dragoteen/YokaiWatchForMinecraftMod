@@ -1,6 +1,6 @@
 {
   "creativetab.ywformc_tab": "Yo-kai Watch For Minecraft Mod",
-  "creativetab.medals_tab": "Médailles",
+  "creativetab.medals_tab": "YWFORMC - Médaillons",
 
   "item.ywformc.yokai_watch": "Yo-kai Watch",
   "item.ywformc.yokai_watch_poche": "Yo-kai Watch de Poche",
@@ -55,6 +55,10 @@
   "item.ywformc.telemir_poche": "Télémir de Poche",
 
   "item.ywformc.medallium": "Médallium",
+  "item.ywformc.medallium_z": "Médallium Z",
+  "item.ywformc.medallium_blasters": "Médallium Blasters",
+  "item.ywformc.medallium_u": "Médallium U",
+  "item.ywformc.medallium_blasters_2": "Médallium Blasters 2",
 
   "item.ywformc.cleyokantik": "Cléyokantik",
   "item.ywformc.cleyolcanik": "Cléyolcanik",
@@ -82,6 +86,7 @@
 
   "gui.ywformc.medaillum": "Médaillum",
   "gui.ywformc.reveal": "Révéler",
+  "gui.ywformc.revealed": "Révélé",
 
   "advancement.ywformc.root.title": "Yo-kai Watch",
   "advancement.ywformc.root.description": "Sans qu'on le sache, les Yo-kais sont ici !",
@@ -96,60 +101,115 @@
 
 
 
-  "item.ywformc.medal_jibanyan": "Médaille de Jibanyan",
-  "item.ywformc.medal_u_whisper": "Médaille de Whisper",
-  "item.ywformc.medal_u_whispocrates": "Médaille de Whispocrates",
+  "item.ywformc.medal_jibanyan": "Médaillon de Jibanyan",
+
+  "item.ywformc.medal_u_whisper": "Médaillon de Whisper",
+  "item.ywformc.medal_u_whispocrates": "Médaillon de Whispocrates",
+
+  "item.ywformc.medal_mochismo": "Médaillon de Sumochi",
+  "item.ywformc.medal_dream_mochismo": "Médaillon de Rêve de Sumochi",
+  "item.ywformc.medal_tattletell": "Médaillon de Toutouïe",
+  "item.ywformc.medal_dream_tattletell": "Médaillon de Rêve de Toutouïe",
+  "item.ywformc.medal_castelius_iii": "Médaillon de Castelius III",
+  "item.ywformc.medal_draggie": "Médaillon de Dracounet",
+  "item.ywformc.medal_dream_draggie": "Médaillon de Rêve de Dracounet",
+  "item.ywformc.medal_dismarelda": "Médaillon de Lulugubre",
+  "item.ywformc.medal_dream_dismarelda": "Médaillon de Rêve de Lulugubre",
+  "item.ywformc.medal_leadoni": "Médaillon d'Égaroni",
+  "item.ywformc.medal_happierre": "Médaillon de Jojojoyeux",
+  "item.ywformc.medal_dream_happierre": "Médaillon de Rêve de Jojojoyeux",
+  "item.ywformc.medal_insomni": "Médaillon d'Insomnelle",
+  "item.ywformc.medal_cadin": "Médaillon de Cigalopin",
+  "item.ywformc.medal_buhu": "Médaillon de Flamente",
+  "item.ywformc.medal_baku": "Médaillon de Baku",
+  "item.ywformc.medal_mirapo": "Médaillon de Télémir",
+  "item.ywformc.medal_dream_mirapo": "Médaillon de Rêve de Télémir",
+  "item.ywformc.medal_lava_lord": "Médaillon d'Etna Magma",
+  "item.ywformc.medal_casanuva": "Médaillon de Donjouant",
+  "item.ywformc.medal_dream_casanuva": "Médaillon de Rêve de Donjouant",
+  "item.ywformc.medal_quaken": "Médaillon de Vibrilion",
+  "item.ywformc.medal_komajiro": "Médaillon de Komajiro",
+  "item.ywformc.medal_dream_komajiro": "Médaillon de Rêve de Komajiro",
+  "item.ywformc.medal_dream_komajiro_live": "Médaillon de Rêve de Komajiro Live",
+  "item.ywformc.medal_komane": "Médaillon de Komaous",
+  "item.ywformc.medal_blazion": "Médaillon de Feulion",
+  "item.ywformc.medal_dream_blazion": "Médaillon de Rêve de Feulion",
+  "item.ywformc.medal_kyubi": "Médaillon de Kyubi",
+  "item.ywformc.medal_dream_kyubi": "Médaillon de Rêve de Kyubi",
+  "item.ywformc.medal_mad_mountain": "Médaillon de Lama Laya",
+  "item.ywformc.medal_tunatic": "Médaillon de Vexturgeon",
+  "item.ywformc.medal_zerberker": "Médaillon de Zerberker",
+  "item.ywformc.medal_z_frazzel": "Médaillon de Z Parantonn",
+  "item.ywformc.medal_dream_frazzel": "Médaillon de Rêve de Parantonn",
+  "item.ywformc.medal_z_firewig": "Médaillon Z de Scolérique",
+  "item.ywformc.medal_swelterrier": "Médaillon de Cho-cho",
+  "item.ywformc.medal_dream_swelterrier": "Médaillon de Rêve de Cho-cho",
+  "item.ywformc.medal_classic_tublappa": "Médaillon de Sale de Bain",
+
+  "item.ywformc.medal_classic_toadal_dude": "Médaillon Classique de Crapop",
+  "item.ywformc.medal_classic_faux_kappa": "Médaillon Classique de Faux Kappa",
+  "item.ywformc.medal_classic_smogmella": "Médaillon Classique de Brumella",
+  "item.ywformc.medal_z_hovernyan": "Médaillon Z d'Hovernyan",
+  "item.ywformc.medal_z_miradox": "Médaillon Z de Triptic-tac",
+  "item.ywformc.medal_classic_arachnus": "Médaillon Classique d'Arachnus",
+
+  "item.ywformc.medal_merican_puppiccino": "Médaillon Méricain d'Espreschiot",
+  "item.ywformc.medal_u_push_pup": "Médaillon U de Clic-bull",
+  "item.ywformc.medal_sir_berus": "Médaillon de Cerbébert",
+  "item.ywformc.medal_pinkipoo": "Médaillon de Choubidou",
+  "item.ywformc.medal_z_lie-in_heart": "Médaillon Z de Rugis",
+  "item.ywformc.medal_u_puppynyan": "Médaillon U de Chionyan",
 
 
-  "item.ywformc.medal_shogunyan": "Médaille de Shogunyan",
-  "item.ywformc.medal_treasure_shogunyan": "Médaille Trésor de Shogunyan",
+  "item.ywformc.medal_shogunyan": "Médaillon de Shogunyan",
+  "item.ywformc.medal_treasure_shogunyan": "Médaillon Trésor de Shogunyan",
 
-  "item.ywformc.medal_komashura": "Médaille de Komashura",
-  "item.ywformc.medal_treasure_komashura": "Médaille Trésor de Komashura",
+  "item.ywformc.medal_komashura": "Médaillon de Komashura",
+  "item.ywformc.medal_treasure_komashura": "Médaillon Trésor de Komashura",
 
-  "item.ywformc.medal_dandoodle": "Médaille de Cabotin",
-  "item.ywformc.medal_treasure_dandoodle": "Médaille Trésir de Cabotin",
+  "item.ywformc.medal_dandoodle": "Médaillon de Cabotin",
+  "item.ywformc.medal_treasure_dandoodle": "Médaillon Trésir de Cabotin",
 
-  "item.ywformc.medal_elder_bloom": "Médaille de Camaïeul",
-  "item.ywformc.medal_treasure_elder_bloom": "Médaille Trésor de Camaïeul",
+  "item.ywformc.medal_elder_bloom": "Médaillon de Camaïeul",
+  "item.ywformc.medal_treasure_elder_bloom": "Médaillon Trésor de Camaïeul",
 
-  "item.ywformc.medal_gilgaros": "Médaille de Gorgouille",
-  "item.ywformc.medal_treasure_gilgaros": "Médaille Trésor de Gorgouille",
+  "item.ywformc.medal_gilgaros": "Médaillon de Gorgouille",
+  "item.ywformc.medal_treasure_gilgaros": "Médaillon Trésor de Gorgouille",
 
-  "item.ywformc.medal_spoilerina": "Médaille de Déballerine",
-  "item.ywformc.medal_treasure_spoilerina": "Médaille Trésor de Déballerine",
+  "item.ywformc.medal_spoilerina": "Médaillon de Déballerine",
+  "item.ywformc.medal_treasure_spoilerina": "Médaillon Trésor de Déballerine",
 
-  "item.ywformc.medal_poofessor": "Médaille de Savantard",
-  "item.ywformc.medal_treasure_poofessor": "Médaille Trésor de Savantard",
+  "item.ywformc.medal_poofessor": "Médaillon de Savantard",
+  "item.ywformc.medal_treasure_poofessor": "Médaillon Trésor de Savantard",
 
-  "item.ywformc.medal_slurpent": "Médaille de Slurpent",
+  "item.ywformc.medal_slurpent": "Médaillon de Slurpent",
 
-  "item.ywformc.medal_u_re-q-perate": "Médaille U de Saincope",
-  "item.ywformc.medal_treasure_re-q-perate": "Médaille Trésor de Saincope",
+  "item.ywformc.medal_u_re-q-perate": "Médaillon U de Saincope",
+  "item.ywformc.medal_treasure_re-q-perate": "Médaillon Trésor de Saincope",
 
-  "item.ywformc.medal_u_princess_pearl": "Médaille U de Corailline",
-  "item.ywformc.medal_treasure_princess_pearl": "Médaille Trésor de Corailline",
+  "item.ywformc.medal_u_princess_pearl": "Médaillon U de Corailline",
+  "item.ywformc.medal_treasure_princess_pearl": "Médaillon Trésor de Corailline",
 
-  "item.ywformc.medal_u_asura": "Médaille U d'Asura",
-  "item.ywformc.medal_treasure_asura": "Médaille Trésor d'Asura",
+  "item.ywformc.medal_u_asura": "Médaillon U d'Asura",
+  "item.ywformc.medal_treasure_asura": "Médaillon Trésor d'Asura",
 
-  "item.ywformc.medal_u_whyvern_king": "Médaille U de Roi Pourkoidon",
-  "item.ywformc.medal_treasure_whyvern_king": "Médaille Trésor de Roi Pourkoidon",
+  "item.ywformc.medal_u_whyvern_king": "Médaillon U de Roi Pourkoidon",
+  "item.ywformc.medal_treasure_whyvern_king": "Médaillon Trésor de Roi Pourkoidon",
 
-  "item.ywformc.medal_treasure_morigami_rex": "Médaille Trésor de [Morigami Rex]",
+  "item.ywformc.medal_treasure_morigami_rex": "Médaillon Trésor de [Morigami Rex]",
 
-  "item.ywformc.medal_treasure_kanekui_hime": "Médaille Trésor de [Kanekui Hime]",
+  "item.ywformc.medal_treasure_kanekui_hime": "Médaillon Trésor de [Kanekui Hime]",
 
-  "item.ywformc.medal_treasure_meopatra": "Médaille Trésor de Néfertyrannie",
-  "item.ywformc.medal_treasure_fitwit": "Médaille Trésor de Cocassepied",
-  "item.ywformc.medal_treasure_el_dorago": "Médaille Trésor d'El Dragonor",
-  "item.ywformc.medal_treasure_the_hinix": "Médaille Trésor de Phémniscian",
-  "item.ywformc.medal_treasure_yodelsen": "Médaille Trésor de Yodéibu",
-  "item.ywformc.medal_treasure_narcis_ii": "Médaille Trésor de Narcès II",
-  "item.ywformc.medal_treasure_zappadokia": "Médaille Trésor de Zappadokia",
-  "item.ywformc.medal_treasure_mademoaiselle": "Médaille Trésor de Mademoaïselle",
-  "item.ywformc.medal_treasure_rosetta_stone": "Médaille Trésor de Pierre de Rosette",
-  "item.ywformc.medal_treasure_doescalibur": "Médaille Trésor d'Exsadibur",
-  "item.ywformc.medal_treasure_encore_dead": "Médaille Trésor d'Encore Dead",
-  "item.ywformc.medal_treasure_armorterasu": "Médaille Trésor de [Armorterasu]"
+  "item.ywformc.medal_treasure_meopatra": "Médaillon Trésor de Néfertyrannie",
+  "item.ywformc.medal_treasure_fitwit": "Médaillon Trésor de Cocassepied",
+  "item.ywformc.medal_treasure_el_dorago": "Médaillon Trésor d'El Dragonor",
+  "item.ywformc.medal_treasure_the_hinix": "Médaillon Trésor de Phémniscian",
+  "item.ywformc.medal_treasure_yodelsen": "Médaillon Trésor de Yodéibu",
+  "item.ywformc.medal_treasure_narcis_ii": "Médaillon Trésor de Narcès II",
+  "item.ywformc.medal_treasure_zappadokia": "Médaillon Trésor de Zappadokia",
+  "item.ywformc.medal_treasure_mademoaiselle": "Médaillon Trésor de Mademoaïselle",
+  "item.ywformc.medal_treasure_rosetta_stone": "Médaillon Trésor de Pierre de Rosette",
+  "item.ywformc.medal_treasure_doescalibur": "Médaillon Trésor d'Exsadibur",
+  "item.ywformc.medal_treasure_encore_dead": "Médaillon Trésor d'Encore Dead",
+  "item.ywformc.medal_treasure_armorterasu": "Médaillon Trésor de [Armorterasu]"
 }

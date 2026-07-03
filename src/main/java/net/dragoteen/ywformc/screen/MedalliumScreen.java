@@ -21,6 +21,12 @@ public class MedalliumScreen extends AbstractContainerScreen<MedalliumMenu> {
     private static final int BUTTON_W = 52;
     private static final int BUTTON_H = 14;
 
+    private static final int ARROW_W = 14;
+    private static final int ARROW_H = 14;
+    private static final int ARROW_LEFT_X = 8;
+    private static final int ARROW_RIGHT_X = 176 - 8 - ARROW_W;
+    private static final int ARROW_Y = 81;
+
     public MedalliumScreen(MedalliumMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
         this.imageWidth = 176;
@@ -32,16 +38,33 @@ public class MedalliumScreen extends AbstractContainerScreen<MedalliumMenu> {
         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
         graphics.blit(TEXTURE, leftPos, topPos, 0, 0, imageWidth, imageHeight);
 
-        // Bouton Révéler
+        boolean revealed = menu.isRevealed();
         boolean complete = menu.isComplete();
-        int btnColor = complete ? 0xFF00AA00 : 0xFF555555;
+
+        int btnColor = revealed ? 0xFF333333 : (complete ? 0xFF00AA00 : 0xFF555555);
         graphics.fill(leftPos + BUTTON_X, topPos + BUTTON_Y,
                 leftPos + BUTTON_X + BUTTON_W, topPos + BUTTON_Y + BUTTON_H, btnColor);
-        graphics.drawCenteredString(font,
-                Component.translatable("gui.ywformc.reveal"),
+
+        Component label = revealed
+                ? Component.translatable("gui.ywformc.revealed")
+                : Component.translatable("gui.ywformc.reveal");
+
+        graphics.drawCenteredString(font, label,
                 leftPos + BUTTON_X + BUTTON_W / 2,
                 topPos + BUTTON_Y + 3,
-                complete ? 0xFFFFFF : 0x888888);
+                revealed ? 0x999999 : (complete ? 0xFFFFFF : 0x888888));
+
+        renderArrow(graphics, ARROW_LEFT_X, ARROW_Y, "◀", menu.hasPrevPage());
+        renderArrow(graphics, ARROW_RIGHT_X, ARROW_Y, "▶", menu.hasNextPage());
+    }
+
+    private void renderArrow(GuiGraphics graphics, int x, int y, String symbol, boolean enabled) {
+        int color = enabled ? 0xFFFFFFFF : 0xFF555555;
+        graphics.fill(leftPos + x, topPos + y, leftPos + x + ARROW_W, topPos + y + ARROW_H, 0xFF333333);
+        graphics.drawCenteredString(font, symbol,
+                leftPos + x + ARROW_W / 2,
+                topPos + y + 3,
+                color);
     }
 
     @Override
@@ -53,7 +76,7 @@ public class MedalliumScreen extends AbstractContainerScreen<MedalliumMenu> {
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        if (menu.isComplete()) {
+        if (menu.isComplete() && !menu.isRevealed()) {
             int bx = leftPos + BUTTON_X;
             int by = topPos + BUTTON_Y;
             if (mouseX >= bx && mouseX < bx + BUTTON_W && mouseY >= by && mouseY < by + BUTTON_H) {
@@ -61,17 +84,37 @@ public class MedalliumScreen extends AbstractContainerScreen<MedalliumMenu> {
                 return true;
             }
         }
+
+        if (menu.hasPrevPage() && isInsideArrow(mouseX, mouseY, ARROW_LEFT_X, ARROW_Y)) {
+            onChangePageClicked(-1);
+            return true;
+        }
+        if (menu.hasNextPage() && isInsideArrow(mouseX, mouseY, ARROW_RIGHT_X, ARROW_Y)) {
+            onChangePageClicked(1);
+            return true;
+        }
+
         return super.mouseClicked(mouseX, mouseY, button);
     }
 
+    private boolean isInsideArrow(double mouseX, double mouseY, int x, int y) {
+        int ax = leftPos + x;
+        int ay = topPos + y;
+        return mouseX >= ax && mouseX < ax + ARROW_W && mouseY >= ay && mouseY < ay + ARROW_H;
+    }
+
     private void onRevealClicked() {
-        // Son
         assert minecraft != null;
         minecraft.getSoundManager().play(
                 SimpleSoundInstance.forUI(SoundEvents.PLAYER_LEVELUP, 1.0f));
-
-        // Envoie un packet au serveur
         ModPackets.sendRevealPacket();
+    }
+
+    private void onChangePageClicked(int direction) {
+        assert minecraft != null;
+        minecraft.getSoundManager().play(
+                SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK.value(), 1.0f));
+        ModPackets.sendChangePagePacket(direction);
     }
 
     @Override

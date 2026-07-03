@@ -19,7 +19,7 @@ public class Medal extends Item implements WatchItem {
 
         LEGENDARY(Rarity.EPIC),
         LEGENDARY_MYSTERY(Rarity.EPIC),
-        MERICAIN_LEGENDARY(Rarity.EPIC),
+        MERICAN_LEGENDARY(Rarity.EPIC),
         PIONEER(Rarity.EPIC),
         DIVINITY(Rarity.RARE),
         TREASURE_DIVINITY(Rarity.EPIC);

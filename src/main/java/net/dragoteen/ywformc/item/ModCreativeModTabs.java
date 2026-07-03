@@ -68,6 +68,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.EXTREME_GOLD.get());
 
                         output.accept(ModItems.MEDALLIUM.get());
+                        output.accept(ModItems.MEDALLIUM_Z.get());
+                        output.accept(ModItems.MEDALLIUM_BLASTERS.get());
+                        output.accept(ModItems.MEDALLIUM_U.get());
+                        output.accept(ModItems.MEDALLIUM_BLASTERS_2.get());
+
                         output.accept(ModItems.YOVNIKAI_WATCH.get());
                         output.accept(ModItems.CLE_YOKAI_WORLD.get());
                         output.accept(ModItems.TELEMIR_POCHE.get());
@@ -105,51 +110,99 @@ public class ModCreativeModTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModItems.MEDAL_JIBANYAN.get());
+                        output.accept(ModItems.MEDAL_MOCHISMO.get());
+                        output.accept(ModItems.MEDAL_TATTLETELL.get());
+                        output.accept(ModItems.MEDAL_CASTELIUS_III.get());
+                        output.accept(ModItems.MEDAL_DRAGGIE.get());
+                        output.accept(ModItems.MEDAL_DISMARELDA.get());
+                        output.accept(ModItems.MEDAL_LEADONI.get());
+                        output.accept(ModItems.MEDAL_HAPPIERRE.get());
+                        output.accept(ModItems.MEDAL_INSOMNI.get());
+                        output.accept(ModItems.MEDAL_CADIN.get());
+                        output.accept(ModItems.MEDAL_BUHU.get());
+                        output.accept(ModItems.MEDAL_BAKU.get());
+                        output.accept(ModItems.MEDAL_MIRAPO.get());
+                        output.accept(ModItems.MEDAL_LAVA_LORD.get());
+                        output.accept(ModItems.MEDAL_CASANUVA.get());
+                        output.accept(ModItems.MEDAL_QUAKEN.get());
+                        output.accept(ModItems.MEDAL_KOMAJIRO.get());
+                        output.accept(ModItems.MEDAL_KOMANE.get());
+                        output.accept(ModItems.MEDAL_BLAZION.get());
+                        output.accept(ModItems.MEDAL_KYUBI.get());
+                        output.accept(ModItems.MEDAL_MAD_MOUNTAIN.get());
+                        output.accept(ModItems.MEDAL_TUNATIC.get());
+                        output.accept(ModItems.MEDAL_ZERBERKER.get());
+                        output.accept(ModItems.MEDAL_SWELTERRIER.get());
+                        output.accept(ModItems.MEDAL_SIR_BERUS.get());
+                        output.accept(ModItems.MEDAL_PINKIPOO.get());
+
+                        output.accept(ModItems.MEDAL_SHOGUNYAN.get());
+                        output.accept(ModItems.MEDAL_KOMASHURA.get());
+                        output.accept(ModItems.MEDAL_DANDOODLE.get());
+                        output.accept(ModItems.MEDAL_ELDER_BLOOM.get());
+                        output.accept(ModItems.MEDAL_GILGAROS.get());
+                        output.accept(ModItems.MEDAL_SPOILERINA.get());
+                        output.accept(ModItems.MEDAL_POOFESSOR.get());
+                        output.accept(ModItems.MEDAL_SLURPENT.get());
+
+
+                        output.accept(ModItems.MEDAL_Z_FRAZZEL.get());
+                        output.accept(ModItems.MEDAL_Z_FIREWIG.get());
+                        output.accept(ModItems.MEDAL_Z_HOVERNYAN.get());
+                        output.accept(ModItems.MEDAL_Z_MIRADOX.get());
+                        output.accept(ModItems.MEDAL_Z_LIE_IN_HEART.get());
+
+
+                        output.accept(ModItems.MEDAL_CLASSIC_TUBLAPPA.get());
+                        output.accept(ModItems.MEDAL_CLASSIC_TOADAL_DUDE.get());
+                        output.accept(ModItems.MEDAL_CLASSIC_FAUX_KAPPA.get());
+                        output.accept(ModItems.MEDAL_CLASSIC_SMOGMELLA.get());
+                        output.accept(ModItems.MEDAL_CLASSIC_ARACHNUS.get());
 
 
                         output.accept(ModItems.MEDAL_U_WHISPER.get());
                         output.accept(ModItems.MEDAL_U_WHISPOCRATES.get());
-
-
-                        output.accept(ModItems.MEDAL_SHOGUNYAN.get());
-                        output.accept(ModItems.MEDAL_TREASURE_SHOGUNYAN.get());
-
-                        output.accept(ModItems.MEDAL_KOMASHURA.get());
-                        output.accept(ModItems.MEDAL_TREASURE_KOMASHURA.get());
-
-                        output.accept(ModItems.MEDAL_DANDOODLE.get());
-                        output.accept(ModItems.MEDAL_TREASURE_DANDOODLE.get());
-
-                        output.accept(ModItems.MEDAL_ELDER_BLOOM.get());
-                        output.accept(ModItems.MEDAL_TREASURE_ELDER_BLOOM.get());
-
-                        output.accept(ModItems.MEDAL_GILGAROS.get());
-                        output.accept(ModItems.MEDAL_TREASURE_GILGAROS.get());
-
-                        output.accept(ModItems.MEDAL_SPOILERINA.get());
-                        output.accept(ModItems.MEDAL_TREASURE_SPOILERINA.get());
-
-                        output.accept(ModItems.MEDAL_POOFESSOR.get());
-                        output.accept(ModItems.MEDAL_TREASURE_POOFESSOR.get());
-
-                        output.accept(ModItems.MEDAL_SLURPENT.get());
+                        output.accept(ModItems.MEDAL_U_PUSH_PUP.get());
+                        output.accept(ModItems.MEDAL_U_PUPPYNYAN.get());
 
                         output.accept(ModItems.MEDAL_U_RE_Q_PERATE.get());
-                        output.accept(ModItems.MEDAL_TREASURE_RE_Q_PERATE.get());
-
                         output.accept(ModItems.MEDAL_U_PRINCESS_PEARL.get());
-                        output.accept(ModItems.MEDAL_TREASURE_PRINCESS_PEARL.get());
-
                         output.accept(ModItems.MEDAL_U_ASURA.get());
-                        output.accept(ModItems.MEDAL_TREASURE_ASURA.get());
-
                         output.accept(ModItems.MEDAL_U_WHYVERN_KING.get());
+
+
+                        output.accept(ModItems.MEDAL_MERICAN_PUPPICCINO.get());
+
+
+                        output.accept(ModItems.MEDAL_DREAM_MOCHISMO.get());
+                        output.accept(ModItems.MEDAL_DREAM_TATTLETELL.get());
+                        output.accept(ModItems.MEDAL_DREAM_DRAGGIE.get());
+                        output.accept(ModItems.MEDAL_DREAM_DISMARELDA.get());
+                        output.accept(ModItems.MEDAL_DREAM_HAPPIERRE.get());
+                        output.accept(ModItems.MEDAL_DREAM_TATTLETELL.get());
+                        output.accept(ModItems.MEDAL_DREAM_MIRAPO.get());
+                        output.accept(ModItems.MEDAL_DREAM_CASANUVA.get());
+                        output.accept(ModItems.MEDAL_DREAM_KYUBI.get());
+                        output.accept(ModItems.MEDAL_DREAM_KOMAJIRO.get());
+                        output.accept(ModItems.MEDAL_DREAM_KOMAJIRO_LIVE.get());
+                        output.accept(ModItems.MEDAL_DREAM_BLAZION.get());
+                        output.accept(ModItems.MEDAL_DREAM_FRAZZEL.get());
+                        output.accept(ModItems.MEDAL_DREAM_SWELTERRIER.get());
+
+
+                        output.accept(ModItems.MEDAL_TREASURE_SHOGUNYAN.get());
+                        output.accept(ModItems.MEDAL_TREASURE_KOMASHURA.get());
+                        output.accept(ModItems.MEDAL_TREASURE_DANDOODLE.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ELDER_BLOOM.get());
+                        output.accept(ModItems.MEDAL_TREASURE_GILGAROS.get());
+                        output.accept(ModItems.MEDAL_TREASURE_SPOILERINA.get());
+                        output.accept(ModItems.MEDAL_TREASURE_POOFESSOR.get());
+                        output.accept(ModItems.MEDAL_TREASURE_RE_Q_PERATE.get());
+                        output.accept(ModItems.MEDAL_TREASURE_PRINCESS_PEARL.get());
+                        output.accept(ModItems.MEDAL_TREASURE_ASURA.get());
                         output.accept(ModItems.MEDAL_TREASURE_WHYVERN_KING.get());
-
                         output.accept(ModItems.MEDAL_TREASURE_MORIGAMI_REX.get());
-
                         output.accept(ModItems.MEDAL_TREASURE_KANEKUI_HIME.get());
-
 
                         output.accept(ModItems.MEDAL_TREASURE_MEOPATRA.get());
                         output.accept(ModItems.MEDAL_TREASURE_FITWIT.get());

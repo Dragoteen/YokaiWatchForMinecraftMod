@@ -3,7 +3,6 @@ package net.dragoteen.ywformc.network;
 import net.dragoteen.ywformc.YoKaiWatchForMinecraftMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 public class ModPackets {
@@ -23,9 +22,18 @@ public class ModPackets {
                 RevealPacket::encode,
                 RevealPacket::decode,
                 RevealPacket::handle);
+
+        CHANNEL.registerMessage(id++, ChangePagePacket.class,
+                ChangePagePacket::encode,
+                ChangePagePacket::decode,
+                ChangePagePacket::handle);
     }
 
     public static void sendRevealPacket() {
         CHANNEL.sendToServer(new RevealPacket());
+    }
+
+    public static void sendChangePagePacket(int direction) {
+        CHANNEL.sendToServer(new ChangePagePacket(direction));
     }
 }
