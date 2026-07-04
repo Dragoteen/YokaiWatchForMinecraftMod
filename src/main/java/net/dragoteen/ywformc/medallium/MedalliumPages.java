@@ -51,6 +51,19 @@ public class MedalliumPages {
             },
             ModItems.MEDAL_KOMASHURA.get());
 
+    public static final MedalliumPageDefinition NORMAL_CABOTIN = register(MedalliumSet.NORMAL, "cabotin",
+            new Item[] {
+                    ModItems.MEDAL_MANJIMUTT.get(),
+                    ModItems.MEDAL_CUTTINCHEEZ.get(),
+                    ModItems.MEDAL_DRIZZLE.get(),
+                    ModItems.MEDAL_EVERFORE.get(),
+                    ModItems.MEDAL_INSOMNI.get(),
+                    ModItems.MEDAL_SKREEK.get(),
+                    ModItems.MEDAL_COMPUNZEL.get(),
+                    ModItems.MEDAL_NAGATHA.get()
+            },
+            ModItems.MEDAL_DANDOODLE.get());
+
     // --- Médallium Z ---
     public static final MedalliumPageDefinition Z_SHOGUNYAN = register(MedalliumSet.Z, "shogunyan",
             new Item[] {
@@ -77,6 +90,19 @@ public class MedalliumPages {
                     ModItems.MEDAL_CLASSIC_TUBLAPPA.get()
             },
             ModItems.MEDAL_KOMASHURA.get());
+
+    public static final MedalliumPageDefinition Z_CABOTIN = register(MedalliumSet.Z, "cabotin",
+            new Item[] {
+                    ModItems.MEDAL_MULTIMUTT.get(),
+                    ModItems.MEDAL_Z_LIE_IN_HEART.get(),
+                    ModItems.MEDAL_BADUDE.get(),
+                    ModItems.MEDAL_SHMOOPIE.get(),
+                    ModItems.MEDAL_TATTLECAST.get(),
+                    ModItems.MEDAL_CASANUVA.get(),
+                    ModItems.MEDAL_SKREEK.get(),
+                    ModItems.MEDAL_Z_RAY_O_LIGHT.get()
+            },
+            ModItems.MEDAL_DANDOODLE.get());
 
     // --- Médallium U ---
     public static final MedalliumPageDefinition U_SHOGUNYAN = register(MedalliumSet.U, "shogunyan",
@@ -105,6 +131,19 @@ public class MedalliumPages {
             },
             ModItems.MEDAL_KOMASHURA.get());
 
+    public static final MedalliumPageDefinition U_CABOTIN = register(MedalliumSet.U, "cabotin",
+            new Item[] {
+                    ModItems.MEDAL_CASANUVA.get(),
+                    ModItems.MEDAL_Z_RAY_O_LIGHT.get(),
+                    ModItems.MEDAL_Z_CARNIBOY.get(),
+                    ModItems.MEDAL_U_LAPPINITUP.get(),
+                    ModItems.MEDAL_CLASSIC_U_WHIRLWEASEL.get(),
+                    ModItems.MEDAL_CLASSIC_U_TENGURIGINAL.get(),
+                    ModItems.MEDAL_CLASSIC_U_THURSTON.get(),
+                    ModItems.MEDAL_KYUBI.get()
+            },
+            ModItems.MEDAL_DANDOODLE.get());
+
     // --- Médallium Blasters 2 ---
     public static final MedalliumPageDefinition BLASTERS2_SHOGUNYAN = register(MedalliumSet.BLASTERS2, "shogunyan",
             new Item[] {
@@ -131,4 +170,17 @@ public class MedalliumPages {
                     ModItems.MEDAL_KOMIGER.get()
             },
             ModItems.MEDAL_KOMASHURA.get());
+
+    public static final MedalliumPageDefinition BLASTERS2_CABOTIN = register(MedalliumSet.BLASTERS2, "cabotin",
+            new Item[] {
+                    ModItems.MEDAL_U_KJ.get(),
+                    ModItems.MEDAL_Z_RAY_O_LIGHT.get(),
+                    ModItems.MEDAL_Z_CARNIBOY.get(),
+                    ModItems.MEDAL_U_LAPPINITUP.get(),
+                    ModItems.MEDAL_CLASSIC_U_WHIRLWEASEL.get(),
+                    ModItems.MEDAL_CLASSIC_U_TENGURIGINAL.get(),
+                    ModItems.MEDAL_TREASURE_DANDORY.get(),
+                    ModItems.MEDAL_KYUBI.get()
+            },
+            ModItems.MEDAL_DANDOODLE.get());
 }
